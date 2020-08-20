@@ -1,0 +1,55 @@
+﻿
+
+<div class="searchConditionDiv" id="companySearchDiv">
+    <div class="row">
+        <div class="col-md-12">
+
+            <div class="row p-3">
+                <div class="col-xl-8 col-lg-8 col-md-8 col-sm-8 col-xs-12 mx-auto">
+                    <label for="selectionPriority" style="font-size:14px;">Company list:</label>
+                    <select class="form-control" id="selectionCompany" name="priority" style="font-size:16px;" onchange="selectionOfCompany()">
+                        <option selected disabled>-- Select Company --</option>
+                        @foreach (var company in ViewBag.company)
+                        {
+                            <option value="@company.SirketId">@company.SirketAdi</option>
+                        }
+                    </select>
+
+                </div>
+            </div>
+            <div class="row p-3">
+                <div class="col-xl-8 col-lg-8 col-md-8 col-sm-8 col-xs-12 mx-auto">
+                    <h4>Added Companies</h4>
+                    <div class="card">
+                        <div class="card-body">
+                            <ul class="p-4" id="selectedCompanyList" style="list-style-type:disc;font-size:16px;"></ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row p-3">
+                <div class="col-xl-8 col-lg-8 col-md-8 col-sm-8 col-xs-12 mx-auto">
+                    <div class="col-md-4 col-sm-4 col-xs-4 col-xl-4">
+                        <label for="startDate" style="font-size:16px;">Start Date</label>
+                        <input class="form-control-lg ml-3" id="searchByCompanyStartDate" type="date" name="startDate" />
+                    </div>
+                    <div class="col-md-4 col-sm-4 col-xs-4 col-xl-4">
+                        <label for="endDate" style="font-size:16px;">End Date</label>
+                        <input class="form-control-lg ml-3" id="searchByCompanyEndDate" type="date" name="endDate" />
+                    </div>
+                    <div class="col-md-4 col-sm-4 col-xs-4 col-xl-4 h-100">
+                        <button class="btn btn-block btn-success btn-lg " type="button" name="searchByCompany"  onclick="sendSearchConditions()"><i class="fas fa-search mr-2"></i>Search</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <hr />
+</div>
+
+
+
+

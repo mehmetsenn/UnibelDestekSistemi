@@ -1,0 +1,93 @@
+﻿@model UnibelDestekSistemi.Models.ViewModels.DashboardModels
+
+@{
+    Layout = "_Layout";
+}
+
+
+<partial name="~/Views/Shared/MenuBarPartials/HeaderPartial.cshtml" />
+
+
+
+
+
+<div class="row p-3">
+    <div class="card w-100 cardDashboard" >
+        <div class="card-header" style="background-color:seagreen;border-color:white;padding:20px;color:whitesmoke"><h2 style="margin-bottom:5px;"><b>@Model.DashboardViewModel.LoginedUser.UserName</b></h2></div>
+        <div class="card-body dashboardCardBodies" style="font-size:18px;">
+            <p>Username :  @Model.DashboardViewModel.LoginedUser.UserName</p>
+            <p>Department Name : @Model.DashboardViewModel.LoginedUser.DepartmentName</p>
+            <p>E-Mail : @Model.DashboardViewModel.LoginedUser.UserEmail</p>
+        </div>
+    </div>
+</div>
+<h1 style="padding:15px 0px"><b>Tickets</b></h1>
+<div class="dropdown-divider"></div>
+<div class="row p-3">
+    <div class="col-md-2 col-sm-6 col-xs-12 p-2">
+
+        <div class="card cardDashboard">
+            <a class="dashboardCardHeaders" href="#" style="text-decoration:none;"><div class="card-header" >Unassigned Tickets</div></a>
+            <div class="card-body dashboardCardBodies" ><h1>36</h1></div>
+        </div>
+
+    </div>
+    <div class="col-md-2 col-sm-6 col-xs-12 p-2">
+
+        <div class="card cardDashboard">
+            <a class="dashboardCardHeaders" href="#" style="text-decoration:none;"><div class="card-header" style="text-decoration:none" >My Tickets</div></a>
+            <div class="card-body dashboardCardBodies"><h1>@Model.DashboardViewModel.LoginedUser.OwnedTicketCount</h1></div>
+        </div>
+
+    </div>
+    <div class="col-md-2 col-sm-6 col-xs-12 p-2">
+
+        <div class="card cardDashboard">
+            <a class="dashboardCardHeaders"  href="#" style="text-decoration:none;"><div class="card-header " >Overdue Tickets</div></a>
+            <div class="card-body dashboardCardBodies"><h1>36</h1></div>
+        </div>
+
+    </div>
+    <div class="col-md-2 col-sm-6 col-xs-12 p-2">
+
+        <div class="card cardDashboard">
+            <a class="dashboardCardHeaders" href="#" style="text-decoration:none;"><div class="card-header " >High Priority Tickets</div></a>
+            <div class="card-body dashboardCardBodies"><h1>@Model.DashboardViewModel.HighPriorityTicketsCount</h1></div>
+        </div>
+
+    </div>
+
+    <div class="col-md-2 col-sm-6 col-xs-12 p-2">
+
+        <div class="card cardDashboard">
+            <a class="dashboardCardHeaders" href="#" style="text-decoration:none"><div class="card-header " >Todays Tickets</div></a>
+            <div class="card-body dashboardCardBodies"><h1>@Model.DashboardViewModel.TodaysTicketsCount</h1></div>
+        </div>
+
+    </div>
+    <div class="col-md-2 col-sm-6 col-xs-12 p-2">
+
+        <div class="card cardDashboard">
+            <a class="dashboardCardHeaders" href="#" style="text-decoration:none;"><div class="card-header " >Yazılım Grubu</div></a>
+            <div class="card-body dashboardCardBodies"><h1>@Model.DashboardViewModel.LoginedUser.UsersDepartmentTicketCount</h1></div>
+        </div>
+
+    </div>
+
+</div>
+
+
+<h1 class="text-center" style="border-top:1px solid lightgray;padding:20px 10px">Overview - Unresolved Tickets -</h1>
+
+<div class="row">
+    <div class="col-md-4 col-sm-12 col-xs-12 p-5">
+        <div id="chartByGroup" style="height: 250px; width: 100%;"></div>
+    </div>
+    <div class="col-md-4 col-sm-12 col-xs-12 p-5">
+        <div id="chartByStatus" style="height: 250px; width: 100%;"></div>
+    </div>
+    <div class="col-md-4 col-sm-12 col-xs-12 p-5">
+        <div id="chartByPriority" style="height: 250px; width: 100%;"></div>
+    </div>
+    
+</div>

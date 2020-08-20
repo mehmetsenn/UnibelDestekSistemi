@@ -1,0 +1,343 @@
+﻿
+
+
+<div id="customSearchModal" class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+
+        <div class="modal-content container-fluid">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel"><b>Choose Search Conditions</b></h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span style="font-size:26px" aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="row px-3 py-2">
+
+                <div class="col-md-12 mt-4">
+                    <h2>General Options</h2>
+                </div>
+                <div class="col-md-4 col-sm-6 col-xs-12">
+                    <input id="customSearchCompany" type="checkbox" name="name" value="" onclick="checkBoxControl(this)" />
+                    <label for="customSearchCompany" style="font-size:18px;margin-left:3px;">Company</label>
+                </div>
+                <div class="col-md-4 col-sm-6 col-xs-12">
+                    <input id="customSearchStatus" type="checkbox" name="name" value="" onclick="checkBoxControl(this)" />
+                    <label for="customSearchStatus" style="font-size:18px;margin-left:3px;">Status</label>
+                </div>
+                <div class="col-md-4 col-sm-6 col-xs-12">
+                    <input id="customSearchType" type="checkbox" name="name" value="" onclick="checkBoxControl(this)" />
+                    <label for="customSearchType" style="font-size:18px;margin-left:3px;">Type</label>
+                </div>
+                <div class="col-md-4 col-sm-6 col-xs-12">
+                    <input id="customSearchPriority" type="checkbox" name="name" value="" onclick="checkBoxControl(this)" />
+                    <label for="customSearchPriority" style="font-size:18px;margin-left:3px;">Priority</label>
+                </div>
+                <div class="col-md-4 col-sm-6 col-xs-12">
+                    <input id="customSearchSubject" type="checkbox" name="name" value="" onclick="checkBoxControl(this)"/>
+                    <label for="customSearchSubject" style="font-size:18px;margin-left:3px;">Subject</label>
+                </div>
+                <div class="col-md-4 col-sm-6 col-xs-12">
+                    <input id="customSearchDepartment" type="checkbox" name="name" value="" onclick="checkBoxControl(this)" />
+                    <label for="customSearchDepartment" style="font-size:18px;margin-left:3px;">Department</label>
+                </div>
+
+                <div class="col-md-4 col-sm-6 col-xs-12">
+                    <input id="customSearchOwner" type="checkbox" name="name" value="" onclick="checkBoxControl(this)" />
+                    <label for="customSearchOwner" style="font-size:18px;margin-left:3px;">Owner</label>
+                </div>
+
+
+                <div class="col-md-12 mt-4">
+                    <h2>Other Options</h2>
+                </div>
+                <div class="col-md-4 col-sm-6 col-xs-12">
+                    <input id="customSearchDemirbas" type="checkbox" name="name" value=""  onclick="checkBoxControl(this)"/>
+                    <label for="customSearchDemirbas" style="font-size:18px;margin-left:3px;">Demirbaş</label>
+                </div>
+                <div class="col-md-4 col-sm-6 col-xs-12">
+                    <input id="customSearchSeriNo" type="checkbox" name="name" value="" onclick="checkBoxControl(this)"/>
+                    <label for="customSearchSeriNo" style="font-size:18px;margin-left:3px;">Seri No</label>
+                </div>
+                <div class="col-md-4 col-sm-6 col-xs-12">
+                    <input id="customSearchUrun" type="checkbox" name="name" value="" onclick="checkBoxControl(this)"/>
+                    <label for="customSearchUrun" style="font-size:18px;margin-left:3px;">Ürün</label>
+                </div>
+                <div class="col-md-4 col-sm-6 col-xs-12">
+                    <input id="idCheckSearch" type="checkbox" name="name" value="" />
+                    <label for="idCheckSearch" style="font-size:18px;margin-left:3px;">Due</label>
+                </div>
+                <div class="col-md-4 col-sm-6 col-xs-12">
+                    <input id="idCheckSearch" type="checkbox" name="name" value="" />
+                    <label for="idCheckSearch" style="font-size:18px;margin-left:3px;">Creator</label>
+                </div>
+                <div class="col-md-4 col-sm-6 col-xs-12">
+                    <input id="idCheckSearch" type="checkbox" name="name" value="" />
+                    <label for="idCheckSearch" style="font-size:18px;margin-left:3px;">Last Activity</label>
+                </div>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-success btn-lg" data-dismiss="modal">Kaydet</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<div id="customSearchCompanyDiv" class="col-md-4 col-sm-6 col-xs-12" style="display:none;">
+    
+        <div class="col-md-12">
+
+            <div class="row p-3">
+                <div class="col-xl-12">
+                    <label for="selectionPriority" style="font-size:14px;">Company list:</label>
+                    <select class="form-control" id="customSelectionCompany" name="priority" style="font-size:16px;" onchange="customSelectionOfCompany()">
+                        <option selected disabled>-- Select Company --</option>
+                        @foreach (var company in ViewBag.company)
+                        {
+                            <option value="@company.SirketId">@company.SirketAdi</option>
+                        }
+                    </select>
+                </div>
+            </div>
+            <div class="row p-3">
+                <div class="col-xl-12">
+                    <h4>Added Companies</h4>
+                    <div class="card">
+                        <div class="card-body">
+                            <ul class="p-4" id="customSelectedCompanyList" style="list-style-type:disc;font-size:16px;"></ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+</div>
+<div id="customSearchStatusDiv" class="col-md-4 col-sm-6 col-xs-12" style="display:none;">
+    
+        <div class="col-md-12">
+
+            <div class="row p-3">
+                <div class="col-xs-12">
+                    <label for="customSelectionStatus" style="font-size:14px;">Status list:</label>
+                    <select class="form-control" id="customSelectionStatus" name="department" style="font-size:16px;" onchange="customSelectionOfStatus()">
+                        <option selected disabled>-- Select Status --</option>
+                        @foreach (var status in ViewBag.status)
+                        {
+                            <option value="@status.DurumId">@status.DurumAdi</option>
+                        }
+
+                    </select>
+
+                </div>
+            </div>
+            <div class="row p-3">
+                <div class="col-xs-12">
+                    <h4>Added Status</h4>
+                    <div class="card">
+                        <div class="card-body">
+                            <ul class="p-4" id="customSelectedStatusList" style="list-style-type:disc;font-size:16px;"></ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+   
+</div>
+<div id="customSearchTypeDiv" class="col-md-4 col-sm-6 col-xs-12" style="display:none;">
+
+    <div class="col-md-12">
+        <div class="row p-3">
+            <div class="col-xs-12">
+                <label for="selectionType" style="font-size:14px;">Type list:</label>
+                <select class="form-control" id="customSelectionType" name="department" style="font-size:16px;" onchange="customSelectionOfType()">
+                    <option selected disabled>-- Select Type --</option>
+                    @foreach (var type in ViewBag.type)
+                    {
+                        <option value="@type.TipId">@type.TipAdi</option>
+                    }
+                </select>
+
+            </div>
+        </div>
+        <div class="row p-3">
+            <div class="col-xs-12">
+                <h4>Added Type</h4>
+                <div class="card">
+                    <div class="card-body">
+                        <ul class="p-4" id="customSelectedTypeList" style="list-style-type:disc;font-size:16px;"></ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+
+    </div>
+
+</div>
+<div id="customSearchPriorityDiv" class="col-md-4 col-sm-6 col-xs-12" style="display:none;">
+
+    <div class="col-md-12">
+
+        <div class="row p-3">
+            <div class="col-xs-12">
+                <label for="customSelectionPriority" style="font-size:14px;">Priority list:</label>
+                <select class="form-control" id="customSelectionPriority" name="priority" style="font-size:16px;" onchange="customSelectionOfPriority()">
+                    <option selected disabled>-- Select Priority --</option>
+                    @foreach (var priority in ViewBag.priority)
+                    {
+                        <option value="@priority.OncelikId">@priority.OncelikAdi</option>
+                    }
+                </select>
+
+            </div>
+        </div>
+        <div class="row p-3">
+            <div class="col-xs-12">
+                <h4>Added Priorities</h4>
+                <div class="card">
+                    <div class="card-body">
+                        <ul class="p-4" id="customSelectedPriorityList" style="list-style-type:disc;font-size:16px;"></ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+<div id="customSearchDepartmentDiv" class="col-md-4 col-sm-6 col-xs-12" style="display:none;">
+
+    <div class="col-md-12" action="/advancedsearch" method="post">
+
+        <div class="row p-3">
+            <div class="col-xs-12">
+                <label for="customSelectionDepartment" style="font-size:14px;">Department list:</label>
+                <select class="form-control" id="customSelectionDepartment" name="department" style="font-size:16px;" onchange="customSelectionOfDepartment()">
+                    <option selected disabled>-- Select Department --</option>
+                    @foreach (var department in ViewBag.department)
+                    {
+                        <option value="@department.DepartmanId">@department.DepartmanAdi</option>
+                    }
+                </select>
+
+            </div>
+        </div>
+        <div class="row p-3">
+            <div class="col-xs-12">
+                <h4>Added Departments</h4>
+                <div class="card">
+                    <div class="card-body">
+                        <ul class="p-4" id="customSelectedDepartmentList" style="list-style-type:disc;font-size:16px;"></ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+       
+
+    </div>
+
+</div>
+<div id="customSearchOwnerDiv" class="col-md-4 col-sm-6 col-xs-12" style="display:none;border">
+
+    <div class="col-md-12">
+
+        <div class="row p-3">
+            <div class="col-xs-12">
+                <label for="sel1" style="font-size:14px;">Department list:</label>
+                <select class="form-control" id="customSelectionDepartmentOfOwner" name="status" style="font-size:16px;" onchange="customDepartmentSelectionOfOwner()">
+                    <option value="all" selected>All</option>
+                    @foreach (var department in ViewBag.department)
+                    {
+                        <option value="custom@@@department.DepartmanId">@department.DepartmanAdi</option>
+                    }
+                </select>
+            </div>
+        </div>
+
+        <div class="row p-3">
+            <div class="col-xs-12">
+                <label for="sel1" style="font-size:14px;">Owner list:</label>
+                <select class="form-control" id="customSelectionOwner" name="status" style="font-size:16px;" onchange="customSelectionOfOwner()">
+                    <option style="display:none" selected disabled> -- Select Owner -- </option>
+                    @foreach (var owner in ViewBag.owner)
+                    {
+                        <option class="custom@@@owner.FkDepartmanId" value="@owner.KullaniciId">@owner.KullaniciAdi</option>
+                    }
+                </select>
+            </div>
+        </div>
+
+        <div class="row p-3">
+            <div class="col-xs-12">
+                <h4>Added Owners</h4>
+                <div class="card">
+                    <div class="card-body">
+                        <ul class="p-4" id="customSelectedOwnerList" style="list-style-type:disc;font-size:16px;""></ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        
+
+    </div>
+
+</div>
+<div id="customSearchSubjectDiv" class="col-md-4 col-sm-6 col-xs-12" style="display:none;">
+
+    <div class="col-md-12">
+        <div class="row p-3">
+            <div class="col-xs-12 mt-1">
+                <div class="input-group  mb-3 col-md-12 ">
+                    <label for="sel1" style="font-size:14px;">Subject</label>
+                    <input id="searchBySubjectInput" type="text" class="form-control-lg w-100" placeholder="Enter a Subject..." onkeyup="customSelectionOfInput(this)">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="customSearchDemirbasDiv" class="col-md-4 col-sm-6 col-xs-12" style="display:none;">
+
+    <div class="col-md-12">
+        <div class="row p-3">
+            <div class="col-xs-12 mt-1">
+                <div class="input-group  mb-3 col-md-12 ">
+                    <label for="searchByDemirbasInput" style="font-size:14px;">Demirbaş</label>
+                    <input id="searchByDemirbasInput" type="text" class="form-control-lg w-100" placeholder="HDD,Kiosk..." onkeyup="customSelectionOfInput(this)">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="customSearchSeriNoDiv" class="col-md-4 col-sm-6 col-xs-12" style="display:none;">
+
+    <div class="col-md-12">
+        <div class="row p-3">
+            <div class="col-xs-12 mt-1">
+                <div class="input-group  mb-3 col-md-12 ">
+                    <label for="searchBySeriNoInput" style="font-size:14px;">Seri No</label>
+                    <input id="searchBySeriNoInput" type="text" class="form-control-lg w-100" placeholder="Seri Numarası" onkeyup="customSelectionOfInput(this)">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="customSearchUrunDiv" class="col-md-4 col-sm-6 col-xs-12" style="display:none;">
+
+    <div class="col-md-12">
+        <div class="row p-3">
+            <div class="col-xs-12 mt-1">
+                <div class="input-group  mb-3 col-md-12 ">
+                    <label for="searchByUrunInput" style="font-size:14px;">Ürün</label>
+                    <input id="searchByUrunInput" type="text" class="form-control-lg w-100" placeholder="Ürün Adı..." onkeyup="customSelectionOfInput(this)">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

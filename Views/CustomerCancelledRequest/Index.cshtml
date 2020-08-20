@@ -1,0 +1,107 @@
+﻿@model UnibelDestekSistemi.Models.DBHandler.Bilet
+@{
+    Layout = "_LayoutUser";
+}
+
+
+
+@*<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">*@
+
+<partial name="~/Views/Shared/MenuBarPartials/customermenubar.cshtml " />
+
+<div class="container-fluid">
+    <div class="row">
+        @*<div class="col-lg-4 pb-5">
+
+            <div class="author-card pb-3">
+                <div class="author-card-cover" style="background-image: url(https://demo.createx.studio/createx-html/img/widgets/author/cover.jpg);"><a class="btn btn-style-1 btn-white btn-sm" href="#" data-toggle="tooltip" title="" data-original-title=></a></div>
+                <div class="author-card-profile">
+                    <div class="author-card-avatar">
+                        <img src="https://bootdey.com/img/Content/avatar/avatar1.png" alt="abbas abbas">
+                    </div>
+                </div>
+            </div>
+            <div class="wizard">
+                <nav class="list-group list-group-flush">
+                    <a class="list-group-item active" href="#">
+                        <div class="d-flex justify-content-between align-items-center">
+
+                        </div>
+                    </a>
+
+                    <a class="list-group-item" href="">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="nav-link" id="customer-nav-link" href="~/customernewrequest">
+                                <i class="fa fa-tag mr-1 text-muted"></i>
+                                <div class="d-inline-block font-weight-medium text-uppercase">Tüm Talepler</div>
+                            </div><span class="badge badge-secondary">4</span>
+
+                        </div>
+                    </a>
+                    <a class="list-group-item" href="/mytickets">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="nav-link" id="customer-nav-link" href="/mytickets">
+                                <i class="fa fa-tag mr-1 text-muted"></i>
+                                <div class="d-inline-block font-weight-medium text-uppercase">Benim Taleplerim</div>
+                            </div><span class="badge badge-secondary">4</span>
+
+                        </div>
+                    </a>
+                    <a class="list-group-item" href="/customerSendingRequest">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="nav-link" id="customer-nav-link" href="/customerSendingRequest">
+                                <i class="fa fa-tag mr-1 text-muted"></i>
+                                <div class="d-inline-block font-weight-medium text-uppercase">Gönderilen Talepler</div>
+                            </div><span class="badge badge-secondary">2</span>
+
+                        </div>
+                    </a>
+                    <a class="list-group-item" href="/CustomerSolvedRequest">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="nav-link" id="customer-nav-link" href="/CustomerSolvedRequest">
+                                <i class="fa fa-tag mr-1 text-muted"></i>
+                                <div class="d-inline-block font-weight-medium text-uppercase">Çözümlenmiş Talepler</div>
+                            </div><span class="badge badge-secondary">3</span>
+
+                        </div>
+                    </a>
+                    <a class="list-group-item" href="/customerCancelledRequest">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="nav-link" id="customer-nav-link" href="/customerCancelledRequest">
+                                <i class="fa fa-tag mr-1 text-muted"></i>
+                                <div class="d-inline-block font-weight-medium text-uppercase">İptal edilen Talepler</div>
+                            </div>
+                            <span class="badge badge-secondary">6</span>
+                        </div>
+                    </a>
+                </nav>
+            </div>
+        </div>*@
+
+        <div class="col" style="font-size:13px;">
+            <div>
+                <h2>İptal Edilen Talepler</h2>
+                <hr />
+                <table class="uk-table uk-table-hover uk-table-striped"  id="customer-datatable">
+                    <thead class="thead-light">
+                        <tr>
+                            <th scope="col" class="thead-light" id="idno">TalepNo </th>
+                            <th scope="col">İlgilenen Kişi</th>
+                            <th scope="col">Bilet Başlığı</th>
+                            <th scope="col">Başlangıç Tarihi</th>
+                            <th scope="col">İptal Tarih</th>
+                            <th scope="col">Departman</th>
+                            <th scope="col">Şirket</th>
+                            <th scope="col">Tip</th>
+                            <th scope="col">Öncelik</th>
+                        </tr>
+                    </thead>
+                    @*<tbody class="thead-light">
+
+                       </tbody>*@
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+

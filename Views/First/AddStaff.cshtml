@@ -1,0 +1,87 @@
+﻿
+@using UnibelDestekSistemi.Models.DBHandler
+
+@model UnibelDestekSistemi.Models.ViewModels.AddStaffViewModel
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+<partial name="~/Views/Shared/MenuBarPartials/HeaderPartial.cshtml" />
+
+<form class="row" asp-action="AddStaff" asp-controller="First" method="post">
+    <div class="form-group col-md-6">
+
+
+
+        @if (ViewBag.KullaniciDurumu != null)
+        {
+            <h4> @ViewBag.KullaniciDurumu </h4>
+        }
+
+        <label class="labelTicketModal" for="staffName">FullName :</label>
+        <input type="text" class="form-control modalInputs" id="staffName" name="staffFullName" />
+
+
+        <label class="labelTicketModal" for="staffUsername">Username :</label><br /><span asp-validation-for="staffUsername"></span>
+        <input type="text" class="form-control modalInputs" id="staffUsername" name="staffUsername" />
+
+
+        <label class="labelTicketModal" for="password">Password :</label><br /><span asp-validation-for="newPassword"></span>
+        <input type="password" class="form-control modalInputs" id="newPassword" name="newPassword" required />
+
+-
+
+        <label class="labelTicketModal" for="newPassword">ConfirmPassword :</label><br /><span asp-validation-for="confirmNewPassword"></span>
+        <input type="password" class="form-control modalInputs" id="repeatPassword" name="confirmNewPassword" required onfocusout="CheckPassword()" />
+
+        <div class="row">
+          @*  <h4 id="_uyariKarakterUzunlugu" style="color:orange;margin-left:5px;">Yeni şifreniz 8 karakterden uzun,16 karakterden büyük olmalı.</h4>*@
+            <h4 id="_uyariSifreEslesme" style="color:orange;margin-left:5px;">Yeni şifre ve şifre tekrarı eşit olmalı.</h4>
+            <h4>@ViewBag.EsDegil</h4>
+        </div>
+
+
+        <label class="labelTicketModal" for="staffEmail">E-Mail :</label><br /><span asp-validation-for="staffEmail"></span>
+        <input type="email" class="form-control modalInputs" id="staffEmail" name="staffEmail" required />
+
+
+        <label class="labelTicketModal" for="selectDepartment">Department : </label><br />
+        @if (ViewBag.selectDepartment != null)
+        {
+            @ViewBag.selectDepartment;
+        }
+        <select class="form-control modalInputs" id="selectDepartment" required name="selectDepartment">
+            <option disabled selected hidden style='display: none' value=''> -- Departman Seçiniz -- </option>
+
+         @foreach (var Departman in ViewBag.Departman)
+            {
+                <option value="@Departman.DepartmanId">@Departman.DepartmanAdi</option>
+            }
+
+
+        </select>
+
+
+        <label class="labelTicketModal" for="selectRole">Authority : </label>
+        <br />
+        @if (ViewBag.SelectRole != null)
+        {
+            @ViewBag.SelectRole;
+        }
+        <select class="form-control modalInputs" id="selectRole" required name="selectRole">
+            <option disabled selected value={null}> -- Role Seçiniz -- </option>
+
+            @foreach (var roller in ViewBag.Roller)
+            {
+                <option value="@roller.RolId ">@roller.RolAdi </option>
+            }
+        </select>
+
+        <button type="submit" style="float:right" class="btn btn-primary btn-lg mt-2">Ekle</button>
+    </div>
+
+</form>
+

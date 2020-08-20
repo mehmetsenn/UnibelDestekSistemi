@@ -1,0 +1,36 @@
+﻿<div class="row">
+   
+    <span id="pageHeader"><b>@ViewBag.pageHeader</b></span>
+    
+    <div class="ml-auto w-75">
+
+        
+
+        <div class="btn-group" style="float:right;">
+
+            <div class="mt-3">
+                <input class="form-control" id="countries" placeholder="Quick Search" />
+            </div>
+
+
+            <a href="/notification" class="btn" data-toggle="tooltip" data-placement="left" title="Notifications">
+                <i class="fas fa-info-circle fa-3x"></i>
+            </a>
+
+            <button type="button" class="btn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="far fa-user-circle fa-3x"></i>
+            </button>
+
+            <div class="dropdown-menu dropdown-menu-right">
+                <a class="dropdown-item profileLogoButton" data-toggle="modal" href="#settingsModal"><i class="fas fa-cog mr-3"></i>Profile Settings</a>
+                <a class="dropdown-item profileLogoButton" asp-action="Logout" asp-controller="Base" role="button"><i class="fas fa-sign-out-alt mr-3"></i>Logout</a>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+
+
+
+

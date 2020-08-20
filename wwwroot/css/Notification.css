@@ -1,0 +1,64 @@
+﻿/* Notification*/   
+#notification-body {
+    height: 100px;
+}
+
+
+#notification-headline {
+    margin-top: 0.5rem;
+    margin-left: 2rem;
+    text-align: left;
+    text-transform: uppercase;
+}
+
+#notification-title {
+    font-size: 20px;
+}
+
+#notification-news {
+    font-size: 17px;
+}
+
+#notification-date {
+    font-size: 12px
+}
+
+
+#notificationLine {
+    width: 100rem;
+}
+
+#notification-block {
+    border: 2px double gray;
+    margin-bottom: 20px;
+    margin-left: 25px;
+    margin-right: 25px;
+    padding: 35px;
+}
+
+.modal-footer {
+    justify-content:flex-start;
+}
+
+/* Notification */
+
+/* Modal css*/
+
+.modal-title {
+    font-size: 18px;
+}
+
+.modal-body {
+    font-size: 15px;
+}
+
+/* Modal css*/
+
+@media screen and (max-width:800px) {
+    #notification-news {
+        font-size:12px;
+    }
+    #notification-title {
+        font-size:5px;
+    }
+}

@@ -1,0 +1,83 @@
+﻿@{
+    Layout = "_LayoutUser";
+}
+
+    @model UnibelDestekSistemi.Models.ViewModels.ActiveUser
+
+<nav class="nav justify-content-center">
+    <img id="bannerImage" class="img-responsive" src="http://destek.unibel.com.tr/__swift/themes/client_default/images/fusion.gif" alt="Card image cap">
+</nav>
+<div class="row" style="height:100vh">
+    <div id="loginPageContainer" class="container-fluid" style="width:100% !important">
+        <div class="row" style="height:100vh">
+            <div class="col-md-6" style="margin-top:auto;margin-bottom:auto;">
+
+                <form  asp-action="Login" asp-controller="LoginPage" method="POST" >
+
+                    <div id="loginCard" class="card">
+
+                        <h2 class="card-title text-light text-center">Sisteme Giriş</h2>
+                        <hr class="cardHR">
+
+                        <div class="card-body">
+
+                            <div class="form-group">
+                                @*
+            @Html.TextBoxFor(k => k.KullaniciAdi, null, new (@class= "bhdbdhd required password email"))
+        @Html.ValidationMessageFor(k)
+                                *@
+
+                                <input type="text" class="form-control" asp-for="KullaniciAdi" id="exampleInputEmail1" placeholder="Kullanıcı Adınız">
+                                <span asp-validation-for="KullaniciAdi"></span>
+
+
+                            </div>
+
+                            <br />
+
+                            <div class="form-group">
+                                <input type="password" class="form-control" name="Sifre" id="exampleInputPassword1" placeholder="Şifreniz">
+
+                            </div>
+
+                            <!--<input type="checkbox" name="BeniHatirla" value="false" id="RememberMe"/>-->
+                           
+                            
+                            <a href="#" style="float:right;color:white;margin-top:2px;color:white">Parolamı unuttum</a>
+                            <br>
+
+                            <br>
+                            <hr class="cardHR">
+                            <input type="submit" class="btn btn-lg btn-success " value="Giriş Yap" style="float:right;background-color:#656363 ;border-color:#65636                            3" />
+
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <div class="col-md-6" style="margin-top:auto;margin-bottom:auto;">
+
+
+                <div id="infoCard" class="card">
+
+                    <h2 class="card-title text-light text-center">İletişim Bilgilerimiz</h2>
+                    <hr class="cardHR">
+
+                    <div class="card-body">
+
+                        <ul id="iletisimBilgileri">
+                            <li>Telefon 1: +90 232 489 16 12</li>
+                            <li>Telefon 2: +90 232 489 10 42</li>
+                            <li>Telefon 3: +90 232 251 15 81</li>
+                            <li>Telefon 4: +90 232 465 00 18 </li>
+                            <li>Faks: +90 232 489 21 32</li>
+                        </ul>
+
+
+
+
+                    </div>
+                </div>
+            </div>
+        </div><>
+        /div>

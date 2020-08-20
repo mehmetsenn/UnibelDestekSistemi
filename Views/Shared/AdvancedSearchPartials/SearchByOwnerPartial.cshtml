@@ -1,0 +1,71 @@
+﻿@{
+
+   
+
+ }
+
+<div class="searchConditionDiv" id="ownerSearchDiv">
+    <div class="row">
+        <div class="col-md-12">
+
+            <div class="row p-3">
+                <div class="col-xl-8 col-lg-8 col-md-8 col-sm-8 col-xs-12 mx-auto">
+                    <label for="sel1" style="font-size:14px;">Department list:</label>
+                    <select class="form-control" id="selectionDepartmentOfOwner" name="status" style="font-size:16px;" onchange="departmentSelectionOfOwner()">
+                        <option value="all" selected>All</option>
+                        @foreach (var department in ViewBag.department)
+                        {
+                            <option value="@department.DepartmanId">@department.DepartmanAdi</option>
+                        }
+                    </select>
+                </div>
+            </div>
+
+            <div class="row p-3">
+                <div class="col-xl-8 col-lg-8 col-md-8 col-sm-8 col-xs-12 mx-auto">
+                    <label for="sel1" style="font-size:14px;">Owner list:</label>
+                    <select class="form-control" id="selectionOwner" name="status" style="font-size:16px;" onchange="selectionOfOwner()">
+                        <option style="display:none" selected disabled> -- Select Owner -- </option>
+                        @foreach (var owner in ViewBag.owner)
+                        {
+                            <option class="@owner.FkDepartmanId" value="@owner.KullaniciId">@owner.KullaniciAdi</option>
+                        }
+                    </select>
+                </div>
+            </div>
+
+            <div class="row p-3">
+                <div class="col-xl-8 col-lg-8 col-md-8 col-sm-8 col-xs-12 mx-auto">
+                    <h4>Added Owners</h4>
+                    <div class="card">
+                        <div class="card-body">
+                            <ul id="selectedOwnerList" style="padding:0 0 0 10px;list-style-type:disc;padding:10px;font-size:16px;"></ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="row p-3">
+                <div class="col-xl-8 col-lg-8 col-md-8 col-sm-8 col-xs-12 mx-auto">
+                    <div class="col-md-4">
+                        <label for="startDate" style="font-size:16px;">Start Date</label>
+                        <input class="form-control-lg ml-3" id="searchByOwnerStartDate" type="date" name="startDate" />
+                    </div>
+                     
+                    <div class="col-md-4">
+                        <label for="endDate" style="font-size:16px;">End Date</label>
+                        <input class="form-control-lg ml-3" id="searchByOwnerEndDate" type="date" name="endDate" />
+                    </div>
+
+                    <div class="col-md-4">
+                        <button class="btn btn-block btn-success btn-lg " type="button" name="searchByCompany" onclick="sendSearchConditions()"><i class="fas fa-search mr-2"></i>Search</button>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    <hr />
+</div>

@@ -1,0 +1,195 @@
+﻿.solMenuMobil {
+    transition: 0.7s;
+    background: magenta;
+    z-index: 2;
+    height: 100%;
+    width: 200px;
+    left:-200px;
+    position:fixed;
+
+}
+#customersolmenu {
+    height: 100%;
+    overflow-x: hidden;
+    padding: 5px 5px;
+}
+
+.solMenu {
+    transition: 0.7s;
+    
+    z-index: 2;
+    height: 100%;
+    width: 200px;
+    left: -200px;
+    position: fixed;
+}
+
+
+.subContainer {
+    transition: 0.7s;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width:100% !important;
+}
+
+body.acik .solMenu {
+    left: 0px;
+    transition: 0.7s;
+}
+
+body.acik .subContainer {
+    left: 200px;
+    width: calc(100% - 200px) !important;
+}
+
+body.acikMobil .solMenuMobil {
+    left: 0px;
+    transition: 1s;
+}
+
+body.acikMobil .subContainer {
+    left: 0px;
+    width: 100%;
+}
+
+
+
+
+
+#solMenuDiv {
+    height: 100%;
+    overflow-x: hidden;
+    padding: 5px 5px;
+    background-color: dodgerblue !important;
+}
+
+
+
+
+
+body {
+    font-family:'Source Sans Pro'
+}
+
+.loginForm {
+    color:whitesmoke;
+}
+
+.formInputs {
+    padding:20px;
+}
+
+
+
+#loginPageContainer {
+   /* background: rgb(233,184,0);
+    background: linear-gradient(90deg, rgba(233,184,0,0.8295693277310925) 0%, rgba(54,147,212,0.5942752100840336) 27%, rgba(13,94,163,0.7791491596638656) 69%, rgba(231,0,175,0.742734593837535) 100%);*/
+     background-image: url('../images/backgroundLoginn.jpg');
+   
+}
+#Iforgotpassword{
+    text-align:center;
+}
+
+
+
+
+
+
+#solMenuToggler {
+    color: white;
+    position:absolute;
+    right:-35px;
+}
+
+.sideMenuButtons:hover {
+    background-color: darkorange !important;
+}
+
+.sideMenuButtons {
+    background-color: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    color: white !important;
+}
+
+
+.ticketsLeftMenu {
+    color: #f7be16 !important;
+}
+
+.ticketsMenu{
+    background-color:dimgray;
+}
+
+
+
+
+
+
+
+#pageHeader {
+    font-size: 20px;
+    margin-left: 40px;
+    letter-spacing: 2px;
+}
+
+
+
+
+
+
+
+
+
+
+
+.settingsButton {
+    background-color: Transparent;
+    background-repeat: no-repeat;
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+    outline: none;
+}
+
+.settingsTab {
+    background-color: #1c4d82;
+    color: white;
+    float: left;
+    border: none;
+    outline: none;
+    padding: 10px 10px;
+    font-size: 12px;
+    width: 50%;
+}
+
+.settingsTab:hover {
+    background-color: #4d84c7;
+}
+
+.tabKapali {
+    display: none !important;
+}
+
+#uyariKarakterUzunlugu {
+    display: none;
+    color: orange;
+    margin-left: 5px;
+}
+
+#uyariSifreEslesme {
+    display: none;
+    color: orange;
+    margin-left: 5px;
+}
+
+.profileLogoButton{
+    font-size:16px;
+}
+
+
+
+
+

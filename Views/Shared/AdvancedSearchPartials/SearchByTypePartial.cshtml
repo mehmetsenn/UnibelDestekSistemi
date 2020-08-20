@@ -1,0 +1,48 @@
+﻿<div class="searchConditionDiv" id="typeSearchDiv">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="row p-3">
+                <div class="col-xl-8 col-lg-8 col-md-8 col-sm-8 col-xs-12 mx-auto">
+                    <label for="selectionType" style="font-size:14px;">Type list:</label>
+                    <select class="form-control" id="selectionType" name="department" style="font-size:16px;" onchange="selectionOfType()">
+                        <option selected disabled>-- Select Type --</option>
+                        @foreach (var type in ViewBag.type)
+                        {
+                            <option value="@type.TipId">@type.TipAdi</option>
+                        }
+                    </select>
+
+                </div>
+            </div>
+            <div class="row p-3">
+                <div class="col-xl-8 col-lg-8 col-md-8 col-sm-8 col-xs-12 mx-auto">
+                    <h4>Added Type</h4>
+                    <div class="card">
+                        <div class="card-body">
+                            <ul id="selectedTypeList" style="padding:0 0 0 10px;list-style-type:disc;padding:10px;font-size:16px;"></ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row p-3">
+                <div class="col-xl-8 col-lg-8 col-md-8 col-sm-8 col-xs-12 mx-auto">
+                    <div class="col-md-4 col-sm-4 col-xs-4 col-xl-4">
+                        <label for="startDate" style="font-size:16px;">Start Date</label>
+                        <input class="form-control-lg ml-3" id="searchByTypeStartDate" type="date" name="startDate" />
+                    </div>
+                    <div class="col-md-4 col-sm-4 col-xs-4 col-xl-4">
+                        <label for="endDate" style="font-size:16px;">End Date</label>
+                        <input class="form-control-lg ml-3" id="searchByTypeEndDate" type="date" name="endDate" />
+                    </div>
+                    <div class="col-md-4 col-sm-4 col-xs-4 col-xl-4 h-100">
+                        <button class="btn btn-block btn-success btn-lg " type="button" name="searchByType" onclick="sendSearchConditions()"><i class="fas fa-search mr-2"></i>Search</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <hr />
+</div>

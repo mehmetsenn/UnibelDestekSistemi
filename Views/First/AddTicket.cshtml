@@ -1,0 +1,73 @@
+﻿@model UnibelDestekSistemi.Models.DBHandler.Bilet
+
+@{
+    ViewData["Title"] = "AddTicket";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<partial name="~/Views/Shared/MenuBarPartials/HeaderPartial.cshtml" />
+
+
+<form action="/addTicket2" method="post">
+    <div class="form-group">
+        <label class="labelTicketModal" for="ticketSubject">Subject :</label>
+        <textarea class="form-control modalInputs" rows="2" id="ticketSubject" name="BiletBasligi"></textarea>
+
+        <label class="labelTicketModal" for="ticketSubject">Content :</label>
+        <textarea class="form-control modalInputs" rows="2" id="ticketContent" name="BiletIcerik"></textarea>
+
+        <label class="labelTicketModal" for="selectCompanies" >Company : </label>
+        <select class="form-control modalInputs" id="selectCompanies" name="FkSirketId" onchange="CheckCompany()">
+            <option disabled selected value=""> -- Şirket Seçiniz -- </option>
+            @foreach (var Sirket in ViewBag.Sirketler)
+            {
+                <option value="@Sirket.SirketId">@Sirket.SirketAdi</option>
+            }
+        </select>
+
+
+        <label class="labelTicketModal" for="selectDepartments" id="labelDeparment">Department : </label>
+        <select class="form-control modalInputs" id="selectDepartments"  name="FkBiletDepartmanId">
+            <option disabled selected> -- Departman Seçiniz -- </option>
+            @foreach (var Departman in ViewBag.Departman)
+            {
+                <option value="@Departman.DepartmanId">@Departman.DepartmanAdi</option>
+            }
+        </select>
+
+
+        <label class="labelTicketModal" for="selectOwners"  style="display:none" id="labelOwner">Owner : </label>
+        <select class="form-control modalInputs" id="selectOwners"  style="display:none" name="FkCalisanKullaniciId">
+            <option value=""> -- Unassigned -- </option>
+
+
+        </select>
+        <label class="labelTicketModal" for="selectType">Type : </label>
+        <select class="form-control modalInputs" id="selectType" name="FkBiletTurId">
+            @foreach (var Tip in ViewBag.Tip)
+            {
+                <option value="@Tip.TipId">@Tip.TipAdi</option>
+            }
+        </select>
+
+        <label class="labelTicketModal" for="selectStatus">Status : </label>
+        <select class="form-control modalInputs" id="selectStatus" name="FkBiletDurumId">
+            @foreach (var Durum in ViewBag.Durum)
+            {
+                <option value="@Durum.DurumId">@Durum.DurumAdi</option>
+            }
+        </select>
+
+        <label class="labelTicketModal" for="selectPriority">Priority : </label>
+        <select class="form-control modalInputs" id="selectPriority" name="FkOncelikId">
+            @foreach (var Oncelik in ViewBag.Oncelik)
+            {
+                <option value="@Oncelik.OncelikId">@Oncelik.OncelikAdi</option>
+            }
+        </select>
+
+        <label class="labelTicketModal" for="selectDate">Date : </label>
+        <input type="date" class="form-control modalInputs" name="ticketDate" value="" id="BiletGonderimTarihi" />
+        <button type="submit" class="btn btn-primary btn-lg">Add ticket</button>
+    </div>
+</form>
+

@@ -1,0 +1,30 @@
+﻿*{
+    margin:0px;
+    
+}
+
+#{
+   
+}
+#customer-request-block {
+    align-content: center;
+    border: 1px solid black;
+    margin-left: 20rem;
+    width: 100% !important;
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(235,235,235,1);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(235,235,235,1);
+    box-shadow: 10px 10px 5px 0px rgba(235,235,235,1);
+
+}
+label {
+    margin-left:3px;
+}
+#customerNewRequest {
+    max-width: 100%;
+    font-family: "Lato" sans-serif;
+}
+@media screen and (max-width: 992px) {
+    * {
+        
+    }
+}

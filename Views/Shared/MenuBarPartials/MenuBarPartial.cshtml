@@ -1,0 +1,116 @@
+﻿<div id="leftNav" class="solMenu" >
+
+
+    <div>
+        <button id="solMenuToggler" class="btn btn-secondary" onclick="toggleLeftMenu()"><i class="fas fa-bars fa-2x"></i></button>
+
+    </div>
+
+
+    <div id="solMenuDiv">
+
+        <h2 class="text-center mt-3" style="color:black;"><strong>Yönetim Grubu</strong></h2>
+
+        <div class="row">
+            <div class="col-md-12" style="margin:5px 0px;margin-left:5px">
+                <span style="font-size:12px;color:#045d5d"><b>Ad Soyad</b></span><button id="changeEmailModal" class="settingsButton" type="button" data-toggle="modal" data-target="#settingsModal" style="color:#045d5d;float:right;"><i class="fas fa-cog mr-3"></i></button>
+                <div class="mt-1">
+                    <span style="font-size:12px;color:#045d5d"><b>Email@@email.com</b></span>
+                </div>
+            </div>
+        </div>
+
+        <hr style="background-color:#045d5d;margin:5px 0px;" />
+
+        <div class="btn-group-vertical btn-group-justified" role="group" aria-label="Basic example">
+
+            <a id="dashboardLink" href="/Dashboard" class="sideMenuButtons btn btn-block btn-primary btn-lg text-left"><i class="fas fa-home"></i><span class="ml-3"><b>Dashboard</b></span></a>
+            <a href="/addticket" class="sideMenuButtons ticketsLeftMenu btn btn-block btn-lg  btn-info text-left"><i class="fas fa-plus-square mr-2"></i></i><span class="ml-3"><b> Talep Ekle</b></span></a>
+            <a id="searchTicketsLink" href="/advancedsearch" class="sideMenuButtons btn btn-block btn-lg btn-primary text-left"><i class="fas fa-search"></i><span class="ml-3"><b>Advanced Search</b></span></a>
+
+            <button class="sideMenuButtons btn btn-block btn-lg btn-info text-left" data-toggle="collapse" data-target="#collapseTickets" role="button" aria-expanded="false" aria-controls="collapseTickets"><i class="fas fa-ticket-alt"></i><span class="ml-3"><b>Talepler(300)</b><i class="fas fa-caret-down" style="float:right;margin-bottom:auto;margin-bottom:auto"></i></span></button>
+
+            <div class="collapse" id="collapseTickets" style="padding: 0px 0px 0px 15px;" ;>
+                <div class="row">
+                    <a href="/groupticket" class="sideMenuButtons ticketsLeftMenu btn btn-block btn-lg  btn-info text-left"><i class="fas fa-ticket-alt"></i><span class="ml-3"><b>Tüm Talepler<span>(50)</span></b></span></a>
+                    <a href="/groupticket" class="sideMenuButtons ticketsLeftMenu btn btn-block btn-lg  btn-info text-left"><i class="fas fa-ticket-alt"></i><span class="ml-3"><b>Taleplerim<span>(20)</span></b></span></a>
+                    <a href="/groupticket" class="sideMenuButtons ticketsLeftMenu btn btn-block btn-lg btn-info text-left"><i class="fas fa-ticket-alt"></i><span class="ml-3"><b>Gönderilen Talepler<span>(20)</span></b></span></a>
+                    <a href="/groupticket" class="sideMenuButtons ticketsLeftMenu btn btn-block btn-lg  btn-info text-left"><i class="fas fa-ticket-alt"></i><span class="ml-3"><b>İptal Edilen Talepler<span>(200)</span></b></span></a>
+                    <a href="/groupticket" class="sideMenuButtons ticketsLeftMenu btn btn-block btn-lg  btn-info text-left"><i class="fas fa-ticket-alt"></i><span class="ml-3"><b>Çözümlenen Talepler</b></span></a>
+                </div>
+
+            </div>
+
+
+
+
+            <a href="#manageTickets" class="sideMenuButtons btn btn-block btn-lg btn-info text-left" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="collapseExample"><i class="fas fa-ticket-alt"></i><span class="ml-3"><b>Manage Tickets</b><i class="fas fa-caret-down" style="float:right;margin-bottom:auto;margin-bottom:auto"></i></span></a>
+            <div class="collapse" id="manageTickets" style="padding: 0px 0px 0px 15px;">
+                <div class="row">
+                    <a href="/addticket" class="sideMenuButtons ticketsLeftMenu btn btn-block btn-lg  btn-info text-left"><i class="fas fa-plus-square mr-2"></i><span class="ml-3"><b> Talep Ekle</b></span></a>
+                    <a href="/groupticket" class="btn btn-block btn-lg sideMenuButtons text-left" data-toggle="modal"><i class="fas fa-ticket-alt mr-2"></i> Tüm Taleplere Git</a>
+                    <a href="#groupticket" class="btn btn-block btn-lg sideMenuButtons text-left" data-toggle="modal"><i class="fas fa-ticket-alt mr-2"></i> Talep Sil</a>
+                    <a href="#groupticket" class="btn btn-block btn-lg sideMenuButtons text-left" data-toggle="modal"><i class="fas fa-ticket-alt mr-2"></i> Talep Düzenle</a>
+
+                </div>
+            </div>
+
+
+            <a id="gruplarLink" href="#collapseGroups" class="sideMenuButtons btn btn-block btn-lg btn-info text-left" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="collapseExample"><i class="fas fa-users"></i><span class="ml-3"><b>Gruplar</b><i class="fas fa-caret-down" style="float:right;margin-bottom:auto;margin-bottom:auto"></i></span></a>
+            <div class="collapse" id="collapseGroups" style="padding: 0px 0px 0px 15px;">
+
+                <div class="row" style="width:200px !important">
+                    <a id="groupLink" href="#collapseGroup" class="sideMenuButtons btn btn-block btn-lg btn-info text-left" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="collapseExample"><i class="fas fa-users"></i><span class="ml-3"><b>Yazılım Grubu</b><i class="fas fa-caret-down" style="float:right;margin-bottom:auto;margin-bottom:auto"></i></span></a>
+                    <div class="collapse" id="collapseGroup" style="padding: 0px 0px 0px 15px;">
+
+                        <div class="row">
+                            <a href="addticket" class="sideMenuButtons ticketsLeftMenu btn btn-block btn-lg  btn-info text-left"><i class="fas fa-plus-square mr-2"></i></i><span class="ml-3"><b> Talep Ekle</b></span></a>
+                            <a href="/groupticket" class="sideMenuButtons ticketsLeftMenu btn btn-block btn-lg  btn-info text-left"><i class="fas fa-ticket-alt"></i><span class="ml-3"><b>Tüm Talepler<span>(50)</span></b></span></a>
+                            <a href="/groupticket" class="sideMenuButtons ticketsLeftMenu btn btn-block btn-lg  btn-info text-left"><i class="fas fa-ticket-alt"></i><span class="ml-3"><b>Taleplerim<span>(20)</span></b></span></a>
+                            <a href="/groupticket" class="sideMenuButtons ticketsLeftMenu btn btn-block btn-lg btn-info text-left"><i class="fas fa-ticket-alt"></i><span class="ml-3"><b>Gönderilen Talepler<span>(20)</span></b></span></a>
+                            <a href="/groupticket" class="sideMenuButtons ticketsLeftMenu btn btn-block btn-lg  btn-info text-left"><i class="fas fa-ticket-alt"></i><span class="ml-3"><b>İptal Edilen Talepler<span>(200)</span></b></span></a>
+                            <a href="/groupticket" class="sideMenuButtons ticketsLeftMenu btn btn-block btn-lg  btn-info text-left"><i class="fas fa-ticket-alt"></i><span class="ml-3"><b>Çözümlenmiş Talepler</b></span></a>
+                        </div>
+
+                    </div>
+
+                    <a id="groupLink" href="#collapseGroupp" class="sideMenuButtons btn btn-block btn-lg btn-info text-left" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="collapseExample"><i class="fas fa-users"></i><span class="ml-3"><b>Teknik Servis Grubu</b><i class="fas fa-caret-down" style="float:right;margin-bottom:auto;margin-bottom:auto"></i></span></a>
+                    <div class="collapse" id="collapseGroupp" style="padding: 0px 0px 0px 15px;">
+                        <a href="/addticket" class="sideMenuButtons ticketsLeftMenu btn btn-block btn-lg  btn-info text-left"><i class="fas fa-plus-square mr-2"></i></i><span class="ml-3"><b> Talep Ekle</b></span></a>
+                        <a href="/groupticket" class="sideMenuButtons ticketsLeftMenu btn btn-block btn-lg  btn-info text-left"><i class="fas fa-ticket-alt"></i><span class="ml-3"><b>Tüm Talepler<span>(50)</span></b></span></a>
+                        <a href="/groupticket" class="sideMenuButtons ticketsLeftMenu btn btn-block btn-lg  btn-info text-left"><i class="fas fa-ticket-alt"></i><span class="ml-3"><b>Taleplerim<span>(20)</span></b></span></a>
+                        <a href="/groupticket" class="sideMenuButtons ticketsLeftMenu btn btn-block btn-lg btn-info text-left"><i class="fas fa-ticket-alt"></i><span class="ml-3"><b>Gönderilen Talepler<span>(20)</span></b></span></a>
+                        <a href="/groupticket" class="sideMenuButtons ticketsLeftMenu btn btn-block btn-lg  btn-info text-left"><i class="fas fa-ticket-alt"></i><span class="ml-3"><b>İptal Edilen Talepler<span>(200)</span></b></span></a>
+                        <a href="/groupticket" class="sideMenuButtons ticketsLeftMenu btn btn-block btn-lg  btn-info text-left"><i class="fas fa-ticket-alt"></i><span class="ml-3"><b>Çözümlenmiş Talepler</b></span></a>
+                    </div>
+                    <a id="groupLink" href="#" class="sideMenuButtons btn btn-block btn-lg  btn-info text-left"><i class="fas fa-users"></i><span class="ml-3"><b>Netsis Destek</b></span></a>
+                    </div>
+                </div>
+
+
+            <a href="#manageMembers" class="sideMenuButtons btn btn-block btn-lg btn-info text-left" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="collapseExample"><i class="fas fa-ticket-alt"></i><span class="ml-3"><b>Manage Members</b><i class="fas fa-caret-down" style="float:right;margin-bottom:auto;margin-bottom:auto"></i></span></a>
+            <div class="collapse" id="manageMembers" style="padding: 0px 0px 0px 15px;">
+                <div class="row">
+                    <a id="addStaffToggler" href="/addStaff" class="btn btn-block btn-lg sideMenuButtons text-left"><i class="fas fa-user-plus mr-2"></i>Add Staff</a>
+                    <a href="/addCustomer" class="btn btn-block btn-lg sideMenuButtons  text-left"><i class="fas fa-user-plus mr-2"></i>Add Customer</a>
+                </div>
+            </div>
+
+
+            <a id="onlineStaffLink" href="#collapseOnlineStaff" class="sideMenuButtons btn btn-block btn-lg btn-info text-left" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="collapseExample"><i class="fas fa-comments"></i><span class="ml-3"><b>Online Staff</b><i class="fas fa-caret-down" style="float:right;margin-bottom:auto;margin-bottom:auto"></i></span></a>
+            <div class="collapse" id="collapseOnlineStaff">
+                <ul style="list-style-type:none;margin:0px;color:white">
+                    <li>Ad Soyad</li>
+                    <li>Ad Soyad</li>
+                    <li>Ad Soyad</li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+    
+
+
+</div>
+<partial name="~/Views/Shared/ModalPartials/ProfileSettingsModalPartial.cshtml" />

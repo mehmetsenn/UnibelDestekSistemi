@@ -1,0 +1,238 @@
+﻿@using UnibelDestekSistemi.Models.DBHandler
+@model Yanit
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<partial name="~/Views/Shared/MenuBarPartials/HeaderPartial.cshtml" />
+
+
+<div class="row mx-auto">
+
+    <div class="col-md-2 p-4 mx-auto">
+
+        <div class="form-group">
+            <label for="sel1">Department</label>
+            <select class="form-control" id="sel1">
+               @foreach (var Departman in ViewBag.Departman){
+                 if (ViewBag.Ticket.BiletDepartmanAdi == Departman.DepartmanAdi)
+                 {
+                     <option value="@Departman.DepartmanId" selected>@Departman.DepartmanAdi</option>
+
+                 }
+                 else
+                 {
+                     <option value="@Departman.DepartmanId">@Departman.DepartmanAdi</option>
+                 }
+             }
+            </select>
+
+        </div>
+    </div>
+    <div class="col-md-2 p-4 mx-auto">
+        <div class="form-group">
+            <label for="sel1">Owner</label>
+            <select class="form-control" id="sel1">
+                   @foreach (var Kullanici in ViewBag.Kullanici){
+           if (ViewBag.Ticket.BiletCalisanAdi == Kullanici.KullaniciAdi)
+           {
+               <option value="@Kullanici.KullaniciId" selected>@Kullanici.KullaniciAdi</option>
+           }
+           else
+           {
+               <option value="@Kullanici.KullaniciId">@Kullanici.KullaniciAdi</option>
+           }
+       }
+            </select>
+        </div>
+    </div>
+    <div class="col-md-2 p-4 mx-auto">
+        <div class="form-group">
+            <label for="sel1">Type</label>
+            <select class="form-control" id="sel1">
+                    @foreach (var Tip in ViewBag.Tip)
+            {
+                if (ViewBag.Ticket.BiletTurAdi == Tip.TipAdi)
+                {
+                    <option value="@Tip.TipId" selected>@Tip.TipAdi</option>
+                }
+                else
+                {
+                    <option value="@Tip.TipId">@Tip.TipAdi</option>
+                }
+            }
+            </select>
+        </div>
+    </div>
+    <div class="col-md-2 p-4 mx-auto">
+        <div class="form-group">
+            <label for="sel1">Status</label>
+            <select class="form-control" name="ticketStatus" id="sel1">
+               @foreach (var Durum in ViewBag.Durum)
+         {
+             if (ViewBag.Ticket.BiletDurumAdi == Durum.DurumAdi)
+             {
+                 <option value="@Durum.DurumId" selected>@Durum.DurumAdi</option>
+             }
+             else
+             {
+                 <option value="@Durum.DurumId">@Durum.DurumAdi</option>
+             }
+         }
+            </select>
+        </div>
+    </div>
+    <div class="col-md-2 p-4 mx-auto">
+        <div class="form-group">
+            <label for="sel1">Priority</label>
+            <select class="form-control" id="sel1">
+              @foreach (var Oncelik in ViewBag.Oncelik)
+         {
+             if (ViewBag.Ticket.BiletOncelikAdi == Oncelik.OncelikAdi)
+             {
+                 <option value="@Oncelik.OncelikId" selected>@Oncelik.OncelikAdi</option>
+
+             }
+             else
+             {
+                 <option value="@Oncelik.OncelikId">@Oncelik.OncelikAdi</option>
+
+             }
+         }
+            </select>
+        </div>
+    </div>
+
+</div>
+
+
+
+<div class="row">
+
+
+
+    <div class="col-md-4">
+
+        <div class="card">
+            <div class="card-header commentHeader">
+                <h3>Informations</h3>
+            </div>
+            <div class="card-body">
+                <span class="additionalInfoTitle">Ticket ID : </span><span>@ViewBag.Ticket.BiletId</span><br />
+                <span class="additionalInfoTitle">Subject : </span><span>@ViewBag.Ticket.BiletIcerik</span><br />
+                <span class="additionalInfoTitle">Company : </span><span>@ViewBag.Ticket.BiletGonderenAdi</span><br />
+                <span class="additionalInfoTitle">Department : </span><span>@ViewBag.Ticket.BiletDepartmanAdi</span><br />
+                <span class="additionalInfoTitle">Priority : </span><span>@ViewBag.Ticket.BiletOncelikAdi</span><br />
+                <span class="additionalInfoTitle">Status : </span><span>@ViewBag.Ticket.BiletDurumAdi</span><br />
+                <span class="additionalInfoTitle">Type : </span><span>@ViewBag.Ticket.BiletTurAdi</span><br />
+                <span class="additionalInfoTitle">Owner : </span><span>@ViewBag.Ticket.BiletCalisanAdi</span><br />
+                <span class="additionalInfoTitle">Creation Date : </span><span>@ViewBag.Ticket.BiletGonderimTarihi</span><br />
+                <span class="additionalInfoTitle">Due : </span><span>@ViewBag.Ticket.BiletKapanisTarihi</span><br />
+                <span class="additionalInfoTitle">Last Activity : </span><span>---</span><br />
+            </div>
+        </div>
+
+        <div class="card mt-2">
+            <div class="card-header commentHeader">
+                <h3>Additional Informations</h3>
+            </div>
+            <div class="card-body">
+                <span class="additionalInfoTitle">Sorumlu Birim / İlgili Kişi : </span><span>#1232</span><br />
+                <span class="additionalInfoTitle">Ürün : </span><span>#1232</span><br />
+                <span class="additionalInfoTitle">Seri No : </span><span>#1232</span><br />
+                <span class="additionalInfoTitle">Demirbaş : </span><span>#1232</span><br />
+                <span class="additionalInfoTitle">Arızanın Özeti : </span><span>#1232</span><br />
+            </div>
+        </div>
+
+    </div>
+
+    <div class="col-md-8">
+
+        <div class="row d-flex flex-row-reverse p-2">
+            <button class="btn col-md-2 btn-success btn-lg ml-3 mt-1"><i class="fas fa-trash-alt mr-2"></i>To Trash</button>
+            <a href="/ownTicket/@ViewBag.Ticket.BiletId" button class="btn col-md-2 btn-success btn-lg ml-3 mt-1"><i class="fab fa-get-pocket mr-2"></i>Own Ticket</a>
+            <button class="btn col-md-2 btn-success btn-lg ml-3 mt-1" onclick="toggleMultipleOwnersTicket()"><i class="fas fa-users mr-2"></i>Multiple Owners</button>
+            <button class="btn col-md-2 btn-success btn-lg ml-3 mt-1" onclick="toggleReplyTicket()"><i class="fas fa-reply mr-2"></i>Reply Ticket</button>
+        </div>
+
+
+
+
+        <div id="replyTicketDiv" class="row p-3 replyTicket">
+            <form class="w-100" action="/showTicket/@ViewBag.Ticket.BiletId " method="post">
+                <h3>Reply Ticket</h3>
+                <textarea class="form-control mt-2" rows="10" name="YanıtIcerigi"></textarea>
+                <input type="submit" class="col-md-1 btn btn-primary btn-block btn-lg float-right ml-auto mt-2">
+            </form>
+        </div>
+
+        <div id="addMultipleOwnersToTicketDiv" class="row p-3 multipleOwners">
+            <form class="w-100">
+                <div class="form-group">
+                    <label class="multipleOwnersLabels" for="exampleFormControlInput1">Group Name</label>
+                    <input type="email" class="form-control multipleOwnersElements" id="exampleFormControlInput1">
+                </div>
+                <div class="form-group">
+                    <label class="multipleOwnersLabels" for="exampleFormControlSelect1">Department</label>
+                    <select class="form-control multipleOwnersElements" id="exampleFormControlSelect12" name="exampleFormControlSelect1">
+                        @foreach (var Departman in ViewBag.Departman)
+                        {
+                            <option value="@@Departman.DepartmanId">@Departman.DepartmanAdi</option>
+                        }
+
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="multipleOwnersLabels" for="exampleFormControlSelect2">Choose Owners</label>
+                    <select multiple class="form-control multipleOwnersElements" id="exampleFormControlSelect2" name="exampleFormControlSelect2">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </select>
+                </div>
+                <div class="d-flex flex-row-reverse">
+                    <input type="submit" class="btn btn-success btn-lg" value="Kaydet">
+                </div>
+            </form>
+        </div>
+
+        <div class="card mt-4 commentCard">
+            <div class="card-header commentHeader">
+                <h4>@ViewBag.Ticket.BiletGonderenSirketAdi - @ViewBag.Ticket.BiletGonderenAdi</h4>
+                <span class="ml-auto">Posted On : @ViewBag.Ticket.BiletGonderimTarihi</span>
+            </div>
+            <div class="card-body">
+                <p class="commentText">@ViewBag.Ticket.BiletIcerik</p>
+            </div>
+        </div>
+
+        
+
+
+         
+
+            <div class="card mt-4 commentCard">
+                <div id="yorumCardHeader" class="card-header">
+                    <h4>ASFASF</h4>
+                    <span class="ml-auto">Posted On : SJADFNASDJF</span>
+                </div>
+                <div class="card-body">
+                    <p class="commentText">jkfbewnhjfkbawejhbf</p>
+                </div>
+            </div>
+       
+        <div>
+
+</div>
+
+
+        
+
+
+    </div>
+</div>
+

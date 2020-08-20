@@ -1,0 +1,56 @@
+﻿
+
+
+<div class="searchConditionDiv" id="prioritySearchDiv">
+    <div class="row">
+        <div class="col-md-12">
+
+            <div class="row p-3">
+                <div class="col-xl-8 col-lg-8 col-md-8 col-sm-8 col-xs-12 mx-auto">
+                    <label for="selectionPriority" style="font-size:14px;">Priority list:</label>
+                    <select class="form-control" id="selectionPriority" name="priority" style="font-size:16px;" onchange="selectionOfPriority()">
+                        <option selected disabled>-- Select Priority --</option>
+                        @foreach (var priority in ViewBag.priority)
+                        {
+                            <option value="@priority.OncelikId">@priority.OncelikAdi</option>
+                        }
+                    </select>
+
+                </div>
+            </div>
+            <div class="row p-3">
+                <div class="col-xl-8 col-lg-8 col-md-8 col-sm-8 col-xs-12 mx-auto">
+                    <h4>Added Priorities</h4>
+                    <div class="card">
+                        <div class="card-body">
+                            <ul id="selectedPriorityList" style="padding:0 0 0 10px;list-style-type:disc;padding:10px;font-size:16px;"></ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row p-3">
+                <div class="col-xl-8 col-lg-8 col-md-8 col-sm-8 col-xs-12 mx-auto">
+                    <div class="col-md-4 col-sm-12 col-xs-12 col-xl-4 ">
+                        <label for="startDate" style="font-size:16px;">Start Date</label>
+                        <input class="form-control-lg ml-3" id="searchByPriorityStartDate" type="date" name="startDate" />
+                    </div>
+                    <div class="col-md-4 col-sm-12 col-xs-12 col-xl-4 ">
+                        <label for="endDate" style="font-size:16px;">End Date</label>
+                        <input class="form-control-lg ml-3" id="searchByPriorityEndDate" type="date" name="endDate" />
+                    </div>
+                    <div class="col-md-4 col-sm-12 col-xs-12 col-xl-4  h-100">
+                        <button  class="btn btn-block btn-success btn-lg " type="button" name="searchCompany"   onclick="sendSearchConditions()"><i class="fas fa-search mr-2"></i>Search</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <hr />
+</div>
+
+
+
+

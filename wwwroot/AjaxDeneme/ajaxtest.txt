@@ -1,0 +1,71 @@
+﻿{
+
+   "data": [
+		
+		{
+
+			"ticketID": "Tiger Nixon",
+            "date": "System Architect",
+            "subject": "$320,800",
+            "company": "2011/04/25",
+            "priority": "Edinburgh",
+            "owner": "İlker Furkan Güner",
+			"expDate": "09/06/1996",
+			"lastReplier": "İlker Furkan Güner"
+
+		},
+
+		{
+
+			"ticketID": "Tiger Nixon",
+            "date": "System Architect",
+            "subject": "$320,800",
+            "company": "2011/04/25",
+            "priority": "Edinburgh",
+            "owner": "İlker Furkan Güner",
+			"expDate": "09/06/1996",
+			"lastReplier": "İlker Furkan Güner"
+
+		},
+
+		{
+			"ticketID": "Tiger Nixon",
+            "date": "System Architect",
+            "subject": "$320,800",
+            "company": "2011/04/25",
+            "priority": "Edinburgh",
+            "owner": "İlker Furkan Güner",
+			"expDate": "09/06/1996",
+			"lastReplier": "İlker Furkan Güner"
+		},
+
+		{
+			"ticketID": "Tiger Nixon",
+            "date": "System Architect",
+            "subject": "$320,800",
+            "company": "2011/04/25",
+            "priority": "Edinburgh",
+            "owner": "İlker Furkan Güner",
+			"expDate": "09/06/1996",
+			"lastReplier": "İlker Furkan Güner"
+		},
+
+		{
+			"ticketID": "1234",
+            "date": "2011/04/25",
+            "subject": "Arıza",
+            "company": "Galataasaray",
+            "priority": "Yüksek",
+            "owner": "İlker Furkan Güner",
+			"expDate": "09/06/1996",
+			"lastReplier": "İlker Furkan Güner"
+		}
+		
+				
+
+   ]
+
+
+
+
+}

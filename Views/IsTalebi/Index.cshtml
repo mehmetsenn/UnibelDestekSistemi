@@ -1,0 +1,73 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+    Layout = "_LayoutUser";
+}
+
+    <partial name=~/Views/Shared/MenuBarPartials/customermenubar.cshtml />
+<h1 id="talep">TALEP ID:()</h1>
+
+<div class="btn-group btn-group-lg" role="group" aria-label="Basic example">
+    <ul class="nav nav-tabs" id="butonlar">
+        <li class="active"><a href="#">Yazılım</a></li>
+        <li><a href="#">Gönderen</a></li>
+        <li><a href="#">Kritik</a></li>
+        <li><a href="#">Arıza</a></li>
+        <li><a href="#">Durum</a></li>
+        <li><a href="#">Öncelik</a></li>
+        <li><a href="#">İş Oluşturma Tarihi</a></li>
+        <li><a href="#">İş Başlangıç Tarihi</a></li>
+    </ul>
+</div>
+<div class="container">
+
+    <div class="row">
+        <div class="col" id="bilgiler1">
+            <br />
+            <i class="fas fa-user-tie"></i>
+            <h3>adsoyad</h3>
+            <h3>ünvan</h3>
+            <h3>04/05/1987</h3>
+            <h3>saat</h3>
+            <button type="button" class="btn btn-secondary btn-lg ">bilgi</button>
+        </div>
+        <div class="col-sm-8" id="bilgiler2">
+            <textarea class="form-control" rows="5" id="texbox1"></textarea>
+        </div>
+    </div>
+</div>
+<div class="container">
+
+    <div class="row">
+        <div class="col" id="bilgiler3">
+
+
+        </div>
+        <div class="col-sm-8" id="bilgiler4">
+            <textarea class="form-control" rows="5" id="texbox"></textarea>
+
+
+
+        </div>
+
+
+    </div>
+
+
+</div>
+
+<div class="container">
+    <br />
+    <input type="file" id="dosyaekle" />
+    <br />
+    <button class="btn btn-primary btn-lg" id="cevapla" onclick="toggleReplyTicket()"><i class="fas fa-reply mr-2"></i>Cevapla</button>
+    <button type="button" class="btn btn-primary btn-lg" id="dosyaeklee">İşi kapat</button>
+
+    <div id="replyTicketDiv" class="row p-3 replyTicket">
+        <form class="w-100" action="/" method="post">
+            <h3>Cevapla</h3>
+            <textarea class="form-control mt-2" rows="10"></textarea>
+            <button class="col-md-1 btn btn-primary btn-block btn-lg float-right ml-auto mt-2"style="margin-bottom:50px;">Gönder</button>
+        </form>
+    </div>
+</div>

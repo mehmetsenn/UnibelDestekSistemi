@@ -1,0 +1,57 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_LayoutUser.cshtml";
+
+}
+
+
+@*<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">*@
+
+<partial name=~/Views/Shared/MenuBarPartials/customermenubar.cshtml />
+
+<div class="container-fluid">
+    <div class="row" style="width:100%;margin-bottom:50px;">
+        <div style="width:100%;">
+
+            <div class=" " style="font-size:13px;width:100%;text-align:center;margin:auto;">
+
+                <div class="d-flex justify-content-end pb-3">
+
+                </div>
+                <div>
+                    <h2>Benim Taleplerim</h2>
+                    <hr />
+                    <table id="customer-datatable" class="uk-table uk-table-divider uk-table-striped" style="width:100%">
+                        <thead>
+                            <tr>
+                                <th scope="col" class="thead-light" id="idno">TalepNo </th>
+                                <th scope="col">Başlangıç Tarihi</th>
+                                <th scope="col">Son Güncelleme</th>
+                                <th scope="col">Tahmini Bitiş</th>
+                                <th scope="col">Son Cevaplayan</th>
+                                <th scope="col">Departman</th>
+                                <th scope="col">Tip</th>
+                                <th scope="col">Durum</th>
+                                <th scope="col">Öncelik</th>
+                            </tr>
+                        </thead>
+                        <tfoot>
+                            <tr>
+                                <th scope="col" class="thead-light" id="idno">TalepNo </th>
+                                <th scope="col">Başlangıç Tarihi</th>
+                                <th scope="col">Son Güncelleme</th>
+                                <th scope="col">Tahmini Bitiş</th>
+                                <th scope="col">Son Cevaplayan</th>
+                                <th scope="col">Departman</th>
+                                <th scope="col">Tip</th>
+                                <th scope="col">Durum</th>
+                                <th scope="col">Öncelik</th>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

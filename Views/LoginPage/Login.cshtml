@@ -1,0 +1,55 @@
+﻿@model UnibelDestekSistemi.Models.ViewModels.ActiveUser
+
+@{
+    Layout = "_LayoutUser";
+}
+
+
+
+<div class="row">
+    <div id="loginPageContainer" class="container-fluid" style="height:100vh;">
+
+        <div  class="row p-5" style="margin-top:50px;">
+            <div class="card col-xl-6 col-lg-6 col-md-6 col-xs-6 col-sm-6 mx-auto loginForm" style="padding:20px;border-color:none;background-color:rgba(255, 255, 255, 0.4);-webkit-box-shadow: 0px 0px 29px 3px rgba(79,79,79,1);
+-moz-box-shadow: 0px 0px 29px 3px rgba(79,79,79,1);
+box-shadow: 0px 0px 29px 3px rgba(79,79,79,1); ">
+
+                <img class="card-img-top mx-auto" src="~/images/unibell.png" alt="Alternate Text" style="width:50%;height:auto;" />
+                <div class="card-body">
+                    <form asp-action="Login" asp-controller="LoginPage" method="post">
+                        <div class="row mt-3">
+                            <div class="form-group col-xl-8 col-lg-8 col-sm-12 col-xs-12 mx-auto">
+                                <input name="KullaniciAdi" type="text" class="form-control" id="loginUserName" aria-describedby="emailHelp" placeholder="Kullanıcı Adınız" style="font-size:16px;">
+                            </div>
+
+                        </div>
+                        <div class="row mt-3">
+                            <div class="form-group col-xl-8 col-lg-8 col-sm-12 col-xs-12 mx-auto">
+                                <input name="Sifre" type="password" class="form-control" id="loginPassword" placeholder="Şifreniz" style="font-size:16px;">
+                            </div>
+                            <br />
+                            <div class="col-xl-8 col-lg-8 col-sm-12 col-xs-12 mx-auto">
+                                
+                                    
+                                    @if (ViewBag.IDSifre != null)
+                                    {
+                                        <span style="color : red;"><b> @ViewBag.IDSifre </b></span>
+                                    }
+                                
+                                        <span style=" float:right;"><a style="color:black;" href="#">Parolamı Unuttum</a></span>
+                            </div>
+                        </div>
+                        
+                        <div class="row mt-5">
+                            <div class="form-group col-xl-8 col-lg-8 col-sm-12 col-xs-12 mx-auto">
+                                <input type="submit" class="btn btn-primary btn-block" id="exampleInputPassword1" value="GİRİŞ YAP" style="font-size:16px;">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</div>

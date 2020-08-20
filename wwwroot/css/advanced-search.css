@@ -1,0 +1,52 @@
+﻿.searchBar {
+    padding:10px;
+    display:none !important;
+}
+
+.searchConditionsDropdown {
+    display: block !important;
+    width: 100%;
+}
+
+.searchConditionButtonsMobil {
+    border:none !important;
+    margin:0 !important;
+}
+
+#searchHeader {
+}
+
+.searchConditionLinkActive{
+    background-color:darkorange !important;
+    border-color:darkorange !important
+}
+
+@media only screen and (min-width: 768px) {
+    .searchBar {
+        display:block !important;
+    }
+    .searchConditionsDropdown {
+        display:none !important;
+    }
+}
+
+.dropdownButtons {
+    margin-top:1px !important;
+}
+
+.search{
+    display:none !important;
+}
+
+.searchConditionDiv {
+    display:none;
+    padding:10px;
+}
+
+.dataTableWidth{
+    width:100%
+}
+
+a {
+    color:black !important;
+}

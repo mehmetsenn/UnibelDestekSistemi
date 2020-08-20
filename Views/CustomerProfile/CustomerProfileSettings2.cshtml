@@ -1,0 +1,49 @@
+﻿
+
+@{
+    Layout = "~/Views/Shared/_LayoutUser.cshtml";
+
+}
+
+<form asp-action="CustomerProfileSettings" asp-controller="CustomerProfile" method="post" id="FormCustomer">
+
+    <div class="form-group"style="margin-bottom:200px;">
+        <label for="exampleFormControlFile1">Foto Ekle</label>
+        <input type="file" class="form-control-file" id="exampleFormControlFile1" name="Foto">
+    </div>
+    <div class="form-group">
+        <label for="formControlInput1">Tam İsim</label>
+        <input type="text" class="form-control" id="formControlInput1" placeholder="İsim Soyisim" name="FullName" value="@Model.FullName">
+    </div>
+    <div class="form-group">
+        <label for="formControlSelect1">Şirketler</label>
+        <select class="form-control" id="formControlSelect1" name="Sirket">
+            @foreach (var Sirket in ViewBag.Sirketler)
+            {
+                if (Sirket.SirketId == ViewBag.SirketID)
+                {
+                    <option  selected value="@Sirket.SirketId">@Sirket.SirketAdi</option>
+                }
+                else
+                {
+                    <option disabled value="@Sirket.SirketId">@Sirket.SirketAdi</option>
+                }
+            }
+
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="formControlInput2">Unvan</label>
+        <input type="text" class="form-control" id="formControlInput2" placeholder="Unvan" name="Unvan" value="@Model.Unvan">
+    </div>
+    <div class="form-group">
+        <label for="formControlInput3">Telefon</label>
+        <input type="tel" class="form-control" id="formControlInput3" placeholder="Telefon" name="Phone" value="@Model.Phone">
+    </div>
+    <div class="form-group">
+        <label for="formControlInput4">E-Posta</label>
+        <input type="email" class="form-control" id="formControlInput4" placeholder="E-posta" name="Eposta" value="@Model.Eposta">
+    </div>
+    <button type="submit" class="btn btn-primary">Save Changes</button>
+
+</form>

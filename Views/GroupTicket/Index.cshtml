@@ -1,0 +1,80 @@
+﻿@{
+    ViewData["Title"] = "Index";
+    Layout = "_Layout";
+
+    <partial name="~/Views/Shared/MenuBarPartials/HeaderPartial.cshtml" />
+}
+<div class="row" style="width:-100px;height:50px;margin:auto;margin-top:20px;font-size:16px;">
+
+    <a class="list-group-item" href="/groupticket">
+        <div class="d-flex justify-content-between align-items-center">
+            <div class="nav-link" id="staff-nav-link" href="/groupticket">
+                <i class="fa fa-tag mr-1 text-muted"></i>
+                <div class="d-inline-block font-weight-medium text-uppercase">Tüm Talepler</div>
+            </div>
+
+        </div>
+    </a>
+
+    <a class="list-group-item" href="/groupticket">
+        <div class="d-flex justify-content-between align-items-center">
+            <div class="nav-link" id="customer-nav-link" href="/groupticket">
+                <i class="fa fa-tag mr-1 text-muted"></i>
+                <div class="d-inline-block font-weight-medium text-uppercase">Taleplerim</div>
+            </div>
+
+        </div>
+    </a>
+
+    <a class="list-group-item" href="/groupticket">
+        <div class="d-flex justify-content-between align-items-center">
+            <div class="nav-link" id="customer-nav-link" href="~/groupticket">
+                <i class="fa fa-tag mr-1 text-muted"></i>
+                <div class="d-inline-block font-weight-medium text-uppercase">Gönderilen Talepler</div>
+            </div>
+
+        </div>
+    </a>
+
+    <a class="list-group-item" href="/groupticket">
+        <div class="d-flex justify-content-between align-items-center">
+            <div class="nav-link" id="customer-nav-link" href="~/groupticket">
+                <i class="fa fa-tag mr-1 text-muted"></i>
+                <div class="d-inline-block font-weight-medium text-uppercase">İptal Edilen Talepler</div>
+            </div>
+
+        </div>
+    </a>
+
+    <a class="list-group-item" href="/groupticket">
+        <div class="d-flex justify-content-between align-items-center">
+            <div class="nav-link" id="customer-nav-link" href="/groupticket">
+                <i class="fa fa-tag mr-1 text-muted"></i>
+                <div class="d-inline-block font-weight-medium text-uppercase">Çözümlenen Talepler</div>
+            </div>
+
+        </div>
+    </a>
+</div>
+
+    <div style="">
+        <h2> Taleplerim</h2>
+        <hr />
+
+        <table id="StaffTicket" class="table table-striped table-bordered" style="width:100%;margin-bottom:50px;">
+            <thead>
+                <tr>
+                    <th scope="col" class="thead-light" id="idno">TalepNo </th>
+                    <th scope="col">Başlangıç Tarihi</th>
+                    <th scope="col">Son Güncelleme</th>
+                    <th scope="col">Tahmini Bitiş</th>
+                    <th scope="col">Son Cevaplayan</th>
+                    <th scope="col">Departman</th>
+                    <th scope="col">Tip</th>
+                    <th scope="col">Durum</th>
+                    <th scope="col">Öncelik</th>
+                </tr>
+            </thead>
+            <tbody>
+</table>
+       </div>

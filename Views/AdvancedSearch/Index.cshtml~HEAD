@@ -1,0 +1,40 @@
+﻿
+
+@{
+    Layout = "_Layout";
+}
+
+<partial name="~/Views/Shared/MenuBarPartials/HeaderPartial.cshtml"/>
+
+
+
+<partial name="~/Views/Shared/AdvancedSearchPartials/SearchConditionPartial.cshtml"/>
+<partial name="~/Views/Shared/AdvancedSearchPartials/SearchByIdPartial.cshtml" />
+<partial name="~/Views/Shared/AdvancedSearchPartials/SearchByCompanyPartial.cshtml" />
+<partial name="~/Views/Shared/AdvancedSearchPartials/SearchByDatePartial.cshtml" />
+<partial name="~/Views/Shared/AdvancedSearchPartials/SearchByStatusPartial.cshtml" />
+<partial name="~/Views/Shared/AdvancedSearchPartials/SearchByDepartmentPartial.cshtml" />
+<partial name="~/Views/Shared/AdvancedSearchPartials/SearchByTypePartial.cshtml" />
+<partial name="~/Views/Shared/AdvancedSearchPartials/SearchBySubjectPartial.cshtml" />
+<partial name="~/Views/Shared/AdvancedSearchPartials/SearchByOwnerPartial.cshtml" />
+<partial name="~/Views/Shared/AdvancedSearchPartials/SearchByPriorityPartial.cshtml" />
+<partial name="~/Views/Shared/AdvancedSearchPartials/SearchByCustomPartial.cshtml" />
+
+
+    <h2 class="ml-3 text-center"><b>SEARCH RESULTS</b></h2>
+
+    <div class="table-responsive">
+        <table id="table_id" class="display dt-responsive nowrap dataTableWidth">
+            <thead>
+                <tr>
+                    <th>Ticket ID</th>
+                    <th>Date</th>
+                    <th>Subject</th>
+                    <th>Company</th>
+                    <th>Priority</th>
+                    <th>Owner</th>
+                    <th>Due</th>
+                </tr>
+            </thead>
+        </table>
+    </div>

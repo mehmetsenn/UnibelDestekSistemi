@@ -1,0 +1,52 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+    Layout = "_Layout";
+}
+
+    <partial name="~/Views/Shared/MenuBarPartials/HeaderPartial.cshtml" />
+
+<div class="container-fluid"style="font-size:15px;margin:30px 30px 30px 30px;">
+    <h2 style="text-align:center;"> Talep Ekle</h2>
+    <hr />
+    <div class="card w-75 center-block">
+        <div class="card-body">
+            <form>
+                <div class="form-group form-group-lg">
+                    <label for="arıza-başlık">Başlık</label>
+                    <input type="email" class="form-control" id="arıza-başlık" placeholder="Başlık Giriniz">
+                </div>
+                <div class="form-group form-group-lg">
+                    <label for="arıza-başlık">Başlık</label>
+                    <input type="email" class="form-control" id="arıza-başlık" placeholder="Başlık Giriniz">
+                </div>
+
+
+                <div class="form-group form-group-lg">
+                    <label for="arıza-görev-alanı">Bölüm</label>
+                    <select class="form-control" id="arıza-görev-alanı">
+                        <option>Yazılım</option>
+                        <option>Teknik</option>
+                        <option>Grafik Web</option>
+                    </select>
+                </div>
+
+                <div class="form-group form-group-lg">
+                    <label for="arıza-başlık">Başlık</label>
+                    <input type="email" class="form-control" id="arıza-başlık" placeholder="Başlık Giriniz">
+                </div>
+
+                <div class="form-group form-group-lg">
+                    <label for="arıza">Konu</label>
+                    <textarea class="form-control" id="arıza" rows="5"></textarea>
+                </div>
+            </form>
+        </div>
+        <div class="card-footer ">
+            <div class="col-5"> <a href="#" style="text-decoration:none;">Yeni Dosya Yükle</a></div>
+            <div> <button class="btn btn-lg btn-primary btn-block" id="arıza-button" type="submit">Gönder</button></div>
+        </div>
+    </div>
+</div>
+
+

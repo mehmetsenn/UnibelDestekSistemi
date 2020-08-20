@@ -1,0 +1,123 @@
+﻿<!DOCTYPE html>
+<html style="height:100vh">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UnibelDestekSistemi</title>
+
+    <environment include="Development">
+        <link href="~/css/Notification.css" rel="stylesheet" />
+        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+        <link href="~/css/style1.css" rel="stylesheet" type="text/css" />
+        <link href="~/css/addTicketModal.css" rel="stylesheet" />
+        <link href="~/css/advanced-search.css" rel="stylesheet" type="text/css" />
+        <link href="~/css/dashboard.css" rel="stylesheet" />
+
+        <link href="~/lib/easy-autocomplete/easy-autocomplete.min.css" rel="stylesheet" />
+        <link href="~/lib/easy-autocomplete/easy-autocomplete.themes.min.css" rel="stylesheet" />
+        <link href="~/css/autocomplete/jquery-ui.min.css" rel="stylesheet" />
+        <script src="~/js/Dashboard.js"></script>
+        <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+        
+        <link href="~/css/showTicket.css" rel="stylesheet" />
+        <!--
+    <script src="~/lib/jquery/jquery.js"></script>
+    <script src="~/lib/jquery-validate/jquery.validate.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"></script>
+    -->
+        <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC|Source+Sans+Pro&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    </environment>
+    <environment exclude="Development">
+    </environment>
+
+</head>
+<body style="font-family:Source Sans Pro">
+
+    
+
+
+    <div class="container-fluid" style="height:100vh">
+        <div class="row h-100" style="height:100vh">
+
+
+            <partial name="~/Views/Shared/MenuBarPartials/MenuBarPartial.cshtml" />
+
+
+
+            <div class="container-fluid subContainer">
+                @RenderBody()
+            </div>
+
+        </div>
+
+        @*<footer class="page-footer font-small special-color-dark pt-4" style="margin-top:60px;">
+
+
+            <div class="row" style="margin-top:120px;">
+                <div class="list-unstyled list-inline text-center " style="font-size:18px;background-color:rgba(20, 19, 19, 0.90);height:60px;position:fixed;bottom:0px;width:100%;color:#ffd800">
+                    
+                        <i class="fas fa-phone fa-lg  " style="margin-top:25px;"></i>
+                        <a style="margin-top:20px;margin-right:10px;">444 40 35</a>
+                        <i class="fas fa-map-marker-alt fa-lg" style="margin-top:25px;"></i>
+                        <a style="margin-top:20px;margin-right:10px;">İzmir Büyükşehir Belediyesi, Cumhuriyet Bulvarı, No:1, Konak/İZMİR</a>
+                        <i class="fas fa-envelope-square fa-lg" style="margin-top:25px;"></i>
+                        <a style="margin-top:20px;margin-right:10px;"> him@izmir.bel.tr </a>
+                    
+
+                </div>
+            </div>
+        </footer>*@
+
+
+    </div>
+
+    <environment include="Development">
+
+
+
+
+        <script src="~/lib/jquery/jquery.js"></script>
+        <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
+
+
+        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.3.2/react.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.3.2/react-dom.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/remarkable/1.7.1/remarkable.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.24/browser.min.js"></script>
+        <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+
+        <script src="https://kit.fontawesome.com/18fa2dd580.js" asp-append-version="true"></script>
+
+        <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <link href="~/js/responsive.dataTables.min.css" rel="stylesheet" />
+
+        <script src="~/lib/easy-autocomplete/jquery.easy-autocomplete.min.js"></script>
+
+        <script src="~/lib/easy-autocomplete/jquery.easy-autocomplete.js"></script>
+
+        <script src="~/js/jquery-ui.min.js"></script>
+
+        <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.css">
+        <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.js"></script>
+        <script src="~/js/dataTables.responsive.min.js"></script>
+        <script src="~/js/site.js" asp-append-version="true"></script>
+
+        <script src="~/js/advancedsearch.js" asp-append-version="true"></script>
+
+        <script src="~/js/javasc.js"></script>
+        <script src="~/js/Dashboard.js"></script>
+
+    </environment>
+    <environment exclude="Development">
+        <script src="~/js/site.min.js" asp-append-version="true"></script>
+    </environment>
+
+
+</body>
+
+</html>

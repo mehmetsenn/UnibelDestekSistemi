@@ -1,0 +1,49 @@
+﻿<div style="margin:auto" class="modal fade modal-lg" id="modalAddCustomer" tabindex="-1" role="dialog" aria-labelledby="addTicketModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header" align="center">
+                <h3 class="modal-title" id="addStaffModalLabel">Add Customer</h3>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body" style="padding:10px">
+                <form action="/advancedsearch" method="post">
+                    <div class="form-group">
+                        <label class="labelTicketModal" for="staffName">Name :</label>
+                        <input type="text" class="form-control modalInputs" id="staffName" name="staffName" />
+                        <label class="labelTicketModal" for="staffSurname">Surname :</label>
+                        <input type="text" class="form-control modalInputs" id="staffSurname" name="staffSurname" />
+                        <label class="labelTicketModal" for="staffUsername">Username :</label>
+                        <input type="text" class="form-control modalInputs" id="staffUsername" name="staffSurname" />
+                        <label class="labelTicketModal" for="staffPassword">Password :</label>
+                        <input type="password" class="form-control modalInputs" id="staffPassword" name="staffPassword" />
+
+                        <label class="labelTicketModal" for="selectDepartment">Company : </label>
+                        <select class="form-control modalInputs" id="selectDepartment" name="selectDepartment">
+                            <option>Company 1</option>
+                            <option>Company 2</option>
+                            <option>Company 3</option>
+                            <option>Company 4</option>
+                            <option>Company 5</option>
+                        </select>
+
+                        <label class="labelTicketModal" for="selectDepartment">Authority : </label>
+                        <select class="form-control modalInputs" id="selectDepartment" name="selectDepartment">
+                            <option>Authority Level 1</option>
+                            <option>Authority Level 2</option>
+                            <option>Authority Level 3</option>
+                            <option>Authority Level 4</option>
+                            <option>Authority Level 5</option>
+                        </select>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary btn-lg" data-dismiss="modal">Close</button>
+                <a href="/addTicket" type="submit" class="btn btn-primary btn-lg">Save changes</a>
+            </div>
+        </div>
+    </div>
+</div>
+

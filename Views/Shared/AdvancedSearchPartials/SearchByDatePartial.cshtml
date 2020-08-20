@@ -1,0 +1,18 @@
+﻿<div id="dateSearchDiv" class="row col-md-12 p-4 searchConditionDiv">
+
+    <div class="row p-3">
+        <div class="mx-auto col-md-8">
+            <div class="col-md-4">
+                <label for="startDate" style="font-size:16px;">Start Date</label>
+                <input class="form-control-lg ml-3" id="searchByDateStartDate" type="date" name="startDate" onChange ="searchByDate()"/>
+            </div>
+            <div class="col-md-4">
+                <label for="endDate" style="font-size:16px;">End Date</label>
+                <input class="form-control-lg ml-3" id="searchByDateEndDate" type="date" name="endDate" onchange="searchByDate()"/>
+            </div>
+            <div class="col-md-4">
+                <button class="btn btn-block btn-success btn-lg " type="button" name="searchByCompany" onclick="sendSearchConditions()"><i class="fas fa-search mr-2"></i>Search</button>
+            </div>
+        </div>
+    </div>
+</div>

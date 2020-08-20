@@ -1,0 +1,108 @@
+﻿
+@{
+    Layout = "~/Views/Shared/_LayoutUser.cshtml";
+}
+
+<h2 id="customer-headline"><span>Kullanıcı Profili</span></h2>
+<hr />
+<div class="row" id="customer-profile-page">
+    
+    <div class="col-md-4">
+        <div class="card w-100" id="customer-profile-card"   style="width: 25rem;">
+            <br />
+            <i class="fas fa-user fa-10x" card-img-top" align="center" > </i>
+            <br /><br /><br />
+            <div class="card-body">
+                <ul>
+                    <li id="customer-profile-list"><h5 class="card-title">@Model.FullName</h5></li>
+                    <li id="customer-profile-list">
+                        Şirket:@ViewBag.NowSirket
+                    </li>
+                    <li id="customer-profile-list">Unvan:@Model.Unvan</li>
+                    <li id="customer-profile-list">Telefon:@Model.Phone</li>
+                    <li id="customer-profile-list">E-Posta: @Model.Eposta</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <form asp-action="CustomerProfileSettings" asp-controller="CustomerProfile" class="col-md-7 pull-right" id="FormCustomer" method="post" name="customer-profile-form" onsubmit="return validateForm()">
+        <div class="form-group form-group-lg">
+            <label style="font-size:1.7rem;" for="customer-profile-name">Tam İsim</label>
+            <input type="text" class="form-control rounded " id="customer-profile-name" name="FullName" placeholder="İsim Soyisim" value="@Model.FullName" required>
+        </div>
+        <div class="form-group form-group-lg" >
+            <label style="font-size:1.7rem;" for="customer-profile-company">Şirketler</label>
+            <select class="form-control" id="customer-profile-company" name="Sirket" required>
+                @foreach (var Sirket in ViewBag.Sirketler)
+                {
+                    if (Sirket.SirketId == ViewBag.SirketID)
+                    {
+                        <option selected value="@Sirket.SirketId">@Sirket.SirketAdi</option>
+                    }
+
+                }
+            </select>
+        </div>
+        <div class="form-group form-group-lg">
+            <label style="font-size:1.7rem;" for="customer-profile-authorization">Unvan</label>
+            <input type="text" class="form-control" id="customer-profile-title" name="Unvan" placeholder="Unvan" value="@Model.Unvan" required>
+        </div>
+        <div class="form-row">
+            <div class="form-group form-group-lg col-sm-6">
+                <label style="font-size:1.7rem;" for="customer-profile-phone">Telefon</label>
+                <input type="tel" class="form-control" id="customer-profile-phone" name="Phone" placeholder="Telefon" value="@Model.Phone" required>
+            </div>
+            <div class="form-group form-group-lg col-sm-6">
+                <label style="font-size:1.7rem;" for="customer-profile-email">E-Posta</label>
+                <input type="email" class="form-control" id="customer-profile-email" name="Eposta" value="@Model.Eposta" placeholder="E-posta" required>
+            </div>
+        </div>
+        <br />
+        <button type="submit" id="customer-submit" class="btn btn-primary btn-lg btn-block">Evet</button> 
+        @*<div class="button-modal">
+            <input type="button" name="btn" value="Güncelle" id="submitBtn" data-toggle="modal" data-target="#customer-profile-modal" class="btn btn-primary btn-lg btn-block"  />
+            <div class="modal fade" id="customer-profile-modal" tabindex="-1" role="dialog" aria-labelledby="customer-profile-modal" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="customer-profile-modal">Form Gönderimini Onaylıyor Musunuz ?</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <table>
+                                <tr>
+                                    <th>Tam İsim</th>
+                                    <td id="customer-profile-tablename" class=""></td>
+                                </tr>
+                                <tr>
+                                    <th>Şirket</th>
+                                    <td id="customer-profile-tablecompany"></td>
+                                </tr>
+                                <tr>
+                                    <th>Unvan</th>
+                                    <td id="customer-profile-tableTitle"></td>
+                                </tr>
+                                <tr>
+                                    <th>Telefon</th>
+                                    <td id="customer-profile-tablephone"></td>
+                                </tr>
+                                <tr>
+                                    <th>E-Posta</th>
+                                    <td id="customer-profile-table-mail"></td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary btn-lg" data-dismiss="modal">
+                                Hayır
+                            </button>
+                            <button type="submit" id="customer-submit"  class="btn btn-success btn-lg">Evet</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>*@
+    </form>
+</div>

@@ -1,0 +1,38 @@
+﻿
+
+<div class="row">
+    <div class="row searchBar searchConditionsButtonGroup col-lg-12 mx-auto">
+        <div class="btn-group btn-group-justified btn-group-lg" role="group">
+            <button id="searchIdButton" type="button" class="btn btn-primary searchConditionButtons" onclick="changeSearchCondition('idSearchDiv','searchIdButton','ID')">ID</button>
+            <button id="searchCompanyButton" type="button" class="btn btn-primary searchConditionButtons" onclick="changeSearchCondition('companySearchDiv','searchCompanyButton','Company')">Company</button>
+            <button id="searchDateButton" type="button" class="btn btn-primary searchConditionButtons" onclick="changeSearchCondition('dateSearchDiv','searchDateButton','Date')">Date</button>
+            <button id="searchStatusButton" type="button" class="btn btn-primary searchConditionButtons" onclick="changeSearchCondition('statusSearchDiv','searchStatusButton','Status')">Status</button>
+            <button id="searchDepartmentButton" type="button" class="btn btn-primary searchConditionButtons" onclick="changeSearchCondition('departmentSearchDiv','searchDepartmentButton','Department')">Department</button>
+            <button id="searchTypeButton" type="button" class="btn btn-primary searchConditionButtons" onclick="changeSearchCondition('typeSearchDiv','searchTypeButton','Type')">Type</button>
+            <button id="searchPriorityButton" type="button" class="btn btn-primary searchConditionButtons" onclick="changeSearchCondition('prioritySearchDiv','searchPriorityButton','Priority')">Priority</button>
+            <button id="searchSubjectButton" type="button" class="btn btn-primary searchConditionButtons " onclick="changeSearchCondition('subjectSearchDiv','searchSubjectButton','Subject')">Subject</button>
+            <button id="searchOwnerButton" type="button" class="btn btn-primary searchConditionButtons" onclick="changeSearchCondition('ownerSearchDiv','searchOwnerButton','Owner')">Owner</button>
+            <button id="searchAllButton" data-toggle="modal" data-target="#customSearchModal" type="button" class="btn btn-primary searchConditionButtons" onclick="changeSearchCondition('customSearchDiv','searchAllButton','Custom')">Custom</button>
+        </div>
+    </div>
+
+     <div class="dropdown w-100 searchConditionsDropdown p-3">
+          <button class="btn btn-primary dropdown-toggle w-100" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Search Conditions</button>
+          <div class="dropdown-menu w-50" aria-labelledby="dropdownMenu2">
+              <button id="searchIdButtonM" type="button" class="btn btn-block btn-outline-primary searchConditionButtonsMobil" onclick="changeSearchCondition('idSearchDiv',this)">ID</button>
+              <button id="searchCompanyButtonM" type="button" class="btn btn-block btn-outline-primary searchConditionButtonsMobil" onclick="changeSearchCondition('companySearchDiv',this)">Company</button>
+              <button id="searchDateButtonM" type="button" class="btn btn-block btn-outline-primary searchConditionButtonsMobil" onclick="changeSearchCondition('dateSearchDiv',this)">Date</button>
+              <button id="searchStatusButtonM" type="button" class="btn btn-block btn-outline-primary searchConditionButtonsMobil" onclick="changeSearchCondition('statusSearchDiv',this)">Status</button>
+              <button id="searchDepartmentButtonM" type="button" class="btn btn-block btn-outline-primary searchConditionButtonsMobil" onclick="changeSearchCondition('departmentSearchDiv',this)">Department</button>
+              <button id="searchTypeButtonM" type="button" class="btn btn-block btn-outline-primary searchConditionButtonsMobil" onclick="changeSearchCondition('typeSearchDiv',this)">Type</button>
+              <button id="searchSubjectButtonM" type="button" class="btn btn-block btn-outline-primary searchConditionButtonsMobil" onclick="changeSearchCondition('subjectSearchDiv','searchSubjectButton','Subject')">Subject</button>
+              <button id="searchOwnerButtonM" type="button" class="btn btn-block btn-outline-primary searchConditionButtonsMobil" onclick="changeSearchCondition('ownerSearchDiv','searchOwnerButton','Owner')">Owner</button>
+              <button id="searchAllButtonM" data-toggle="modal" data-target="#customSearchModal" class="btn btn-block btn-outline-primary searchConditionButtonsMobil" onclick="changeSearchCondition('customSearchDiv','searchAllButton','Custom')">Custom</button>
+          </div>
+      </div>
+        
+
+    <h2 id="searchHeader" class="mt-2 mx-auto">SEARCH TICKET BY ID</h2>
+
+
+</div>

@@ -1,0 +1,35 @@
+﻿body {
+}
+#customer-profile-page {
+    height: calc(100% - 200px);
+}
+
+#customer-profile-form {
+    border:1px solid red;
+    padding-bottom:2rem;
+    height:100%;
+
+}
+
+#customer-profile-list {
+    list-style-type:none;
+
+}
+
+#customer-profile-card {
+   
+    margin-bottom:10px;
+    height:100%;
+}
+
+#customer-card-header {
+    margin:25px;
+}
+#customer-card-body {
+    margin:75px;
+
+}
+
+    #customer-card-body li {
+        font-size:1.6rem;
+    }

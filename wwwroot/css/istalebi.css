@@ -1,0 +1,61 @@
+﻿#butonlar{
+    margin-left:25px;
+    margin-top:10px;
+    font-size:17px;
+}
+#talep{
+    margin-left:30px;
+    margin-top:10px;
+}
+#bilgiler1 {
+    font-size: 15px;
+    margin-top: 20px;
+    text-align: center;
+    border: 2px solid;
+    width: 500px;
+    height: 200px;
+}
+#bilgiler2 {
+    font-size: 15px;
+    margin-top: 20px;
+    width:490px;
+    
+}
+#bilgiler3 {
+    font-size: 15px;
+    margin-top: 20px;
+    text-align: center;
+    border: 2px solid;
+    width:500px;
+    height:200px;
+}
+#bilgiler4 {
+    font-size: 15px;
+    margin-top: 20px;
+    width: 500px;
+    height: 200px;
+    
+}
+#texbox {
+    width: 600px;
+    height: 200px;
+    float: left;
+    border: 2px solid;
+}
+#texbox1 {
+    width: 600px;
+    height: 200px;
+    float: left;
+    border: 2px solid;
+}
+#dosyaeklee{
+    float:right;
+}
+#cevapla{
+    float:right;
+    margin-left:5px;
+}
+#dosyaekle{
+    float:left;
+    font-size:16px;
+}

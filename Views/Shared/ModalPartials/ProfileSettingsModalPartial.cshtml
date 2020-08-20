@@ -1,0 +1,88 @@
+﻿@*@model UnibelDestekSistemi.Models.SifreDegistirmeController*@ 
+<div class="modal fade" id="settingsModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title" id="exampleModalLabel">PROFILE SETTINGS</h3>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+
+            </div>
+            <div class="row">
+                <div class="btn-group col-sm-12" role="group" aria-label="Basic example">
+                    <button id="changePasswordTabButton" style="border-right:1px solid white;" type="button" class="settingsTab" onclick="profileSettingsTabToggle('password')">Password Setting</button>
+                    <button id="changeEmailTabButton" type="button" class="settingsTab" onclick="profileSettingsTabToggle('departments')">Change E-mail</button>
+                </div>
+            </div>
+            <div class="modal-body">
+                <div id="passwordSettingsDiv">
+
+
+
+
+                    <form asp-action="ChangePassword" asp-controller="Profile" method="POST">
+                        <h3>CHANGE PASSWORD </h3>
+                        <br />
+                        <div class="form-group row mx-2 mt-2">
+                            <label class="col-sm-4 my-auto" for="existingPasswordLabel">Existing Password</label>
+                            <input name="password" type="password" class="form-control col-sm-8" id="existingPasswordLabel" placeholder="Şu anki şifreniz...">
+                        </div>
+                        <div class="form-group row mx-2 mt-2">
+                            <label class="col-sm-4 my-auto" for="newPasswordLabel">New Password</label>
+                            <input name="newPassword" type="password" class="form-control col-sm-8" id="newPasswordLabel" placeholder="Yeni Şifreniz">
+                        </div>
+                        <div class="form-group row mx-2 mt-2">
+                            <label class="col-sm-4 my-auto" for="repeatPasswordLabel">New Password(Repeat)</label>
+                            <input name="confirmNewPassword" type="password" class="form-control col-sm-8" required id="repeatPasswordLabel" placeholder="Yeni Şifreyi Tekrarlayınız" onfocusout="denemeFunction()">
+                            <!--    @@Html.ValidationMessageFor("confirmNewPassword","",new { }) -->
+                        </div>
+                        <div class="row">
+                            <h4 id="uyariKarakterUzunlugu" style="color:orange;margin-left:5px;">Yeni şifreniz 8 karakterden uzun,16 karakterden büyük olmalı.</h4>
+                            <h4 id="uyariSifreEslesme" style="color:orange;margin-left:5px;">Yeni şifre ve şifre tekrarı eşit olmalı.</h4>
+                        </div>
+                        <h4 id="errorMessagePassword">@TempData["uyarı"]</h4>
+                        <input class="btn btn-success float-right mr-2" type="submit" name="changePassword" value="Save Changes" />
+
+                    </form>
+                </div>
+
+                <div id="assignedDepartmentsDiv" class="tabKapali">
+
+
+                    <div id="passwordSettingsDiv">
+
+
+
+                        <form asp-action="CustomerChangeEmail" asp-controller="CustomerChangeEmail" method="POST">
+                            <h3>Change E-Mail</h3>
+                            <br />
+                            <div class="form-group row mx-2 mt-2">
+                                <label class="col-sm-4 my-auto" for="existingPasswordLabel">Existing Password</label>
+                                <input name="Email" type="email" class="form-control col-sm-8" id="existingEmailLabel" placeholder="Şu anki E-postanız...">
+                            </div>
+                            <div class="form-group row mx-2 mt-2">
+                                <label class="col-sm-4 my-auto" for="newPasswordLabel">New Password</label>
+                                <input name="newEmail" type="email" class="form-control col-sm-8" id="newEmailLabel" placeholder="Yeni E-postanız...">
+                            </div>
+                           
+                            
+                            <h4 id="errorMessage">@TempData["eposta"]</h4>
+                           
+                            <input class="btn btn-success float-right mr-2" type="submit" id="changeEmailButton" name="changeEmail" value="Save Changes" />
+
+                        </form>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+<script>
+
+
+
+</script>

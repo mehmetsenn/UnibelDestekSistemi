@@ -1,0 +1,34 @@
+﻿.additionalInfoTitle{
+    font-size:16px;
+    font-weight:600;
+}
+.commentHeaderStaff{
+    background:azure !important;
+}
+
+.commentHeaderUser {
+    background: orange !important;
+}
+.commentText{
+    font-size:16px;
+}
+.commentCard{
+    border-radius:5px;
+}
+
+.replyTicket {
+    display:none !important;
+}
+
+.multipleOwners{
+    display:none !important;
+   
+}
+
+.multipleOwnersLabels {
+    font-size: 14px !important;
+}
+
+.multipleOwnersElements {
+    font-size:16px !important;
+}

@@ -1,0 +1,63 @@
+﻿
+@{
+    Layout = "_LayoutUser";
+    
+}
+
+
+
+<div class="container-fluid">
+    <h2  > Yeni Talep</h2>
+    <hr />
+    <div class="pull-left">
+        <img src="~/images/unibell.png" class="ml-5 mt-5" alt="Alternate Text" />
+    </div>
+    <div class="card w-50 pull-right">
+        <div class="card-body">
+            <form>
+                <div class="form-group form-group-lg">
+                    <label for="arıza-öncelik">Öncelik Giriniz</label>
+                    <select class="form-control" id="Öncelik">
+                        <option>Kritik</option>
+                        <option>Çok Acil</option>
+                        <option>Acil</option>
+                    </select>
+                </div>
+
+                <div class="form-group form-group-lg">
+                    <label for="arıza-tip">Öncelik Giriniz</label>
+                    <select class="form-control" id="arıza-tip">
+                        <option>Arıza</option>
+                        <option>Hata</option>
+                        <option>Görev</option>
+                    </select>
+                </div>
+
+                <div class="form-group form-group-lg">
+                    <label for="arıza-görev-alanı">Öncelik Giriniz</label>
+                    <select class="form-control" id="arıza-görev-alanı">
+                        <option>Yazılım</option>
+                        <option>Teknik</option>
+                        <option>Grafik Web</option>
+                    </select>
+                </div>
+
+                <div class="form-group form-group-lg">
+                    <label for="arıza-başlık">Konu</label>
+                    <input type="email" class="form-control" id="arıza-başlık" placeholder="Başlık Giriniz">
+                </div>
+
+                <div class="form-group form-group-lg">
+                    <label for="arıza">Example textarea</label>
+                    <textarea class="form-control" id="arıza" rows="5"></textarea>
+                </div>
+            </form>
+        </div>
+        <div class="card-footer ">
+            <div class="col-5"> <a href="#" style="text-decoration:none;">Yeni Dosya Yükle</a></div>
+            <div > <button class="btn btn-lg btn-success btn-block" id="arıza-button" type="submit"><i class="fa fa-paper-plane" aria-hidden="true"></i> Gönder</button></div>
+        </div>
+    </div>
+</div>
+
+
